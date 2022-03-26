@@ -1,7 +1,7 @@
 :root {
+  --alinhar-logo: flex-start;
   --destaque: #E500FF;
   --destaque-escuro: #E500FF;
-  --alinhar-logo: flex-start;
   --botão1: #A020F0;
   --botão2: #00FF00;
   --botão3: #00FFFF;
@@ -346,7 +346,6 @@ a.is-muted:hover {
   .equipe li {
     width: 50%;
   }
-
   .equipe li:nth-child(2n):not(:last-child) {
     margin-bottom: 2rem;
   }
