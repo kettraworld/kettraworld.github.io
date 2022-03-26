@@ -369,23 +369,7 @@ a.is-muted:hover {
   .equipe li:nth-child(2n):not(:last-child) {
     margin-bottom: 2rem;
   }
-
-.cor-4{color:#be0000}
-.cor-c{color:#fe3f3f}
-.cor-6{color:#d9a334}
-.cor-e{color:#fefe3f}
-.cor-2{color:#FF7F00}
-.cor-a{color:#3ffe3f}
-.cor-b{color:#3ffefe}
-.cor-3{color:#00bebe}
-.cor-1{color:#0000be}
-.cor-9{color:#3f3ffe}
-.cor-d{color:#fe3ffe}
-.cor-5{color:#be00be}
-.cor-f{color:#fff}
-.cor-7{color:#bebebe}
-.cor-8{color:#3f3f3f}
-.cor-0{color:#000}
+.cor-A2A{color:#FF7F00}
 .cor-ABC{color: #E700FF}
 .cor-CBA{color: #8A2700}
 .cor-CBC{color: #0055FF}
