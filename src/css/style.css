@@ -272,6 +272,9 @@ a.is-muted:hover {
   .container>.navbar .navbar-menu, .navbar>.container .navbar-menu {
     margin-right: 0;
   }
+    .equipe li:nth-child(3n):not(:last-child) {
+    margin-bottom: 2rem;
+  }
 }
 
 @media screen and (max-width: 1023px) {
