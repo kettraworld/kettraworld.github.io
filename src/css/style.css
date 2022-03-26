@@ -236,6 +236,7 @@ a.is-muted:hover {
   .logo.container {
     justify-content: center;
   }
+}
   .navbar-menu {
     background: var(--destaque-escuro);
     border-bottom-left-radius: 5px;
