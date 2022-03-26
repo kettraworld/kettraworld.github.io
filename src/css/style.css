@@ -265,7 +265,7 @@ a.is-muted:hover {
   }
 }
 
-/* botoes */
+/* inicio dos botoes */
 button {
   cursor: pointer;
   text-align: center;
@@ -335,6 +335,8 @@ button:hover {
     width: 80px;
   }
 }
+
+/* finap dos botoes */
 
 .cor-A2A{color: #FF7F00}
 .cor-ABC{color: #E700FF}
