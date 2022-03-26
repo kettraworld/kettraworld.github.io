@@ -259,6 +259,12 @@ a.is-muted:hover {
   }
 }
 
+.equipe {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
   .navbar-end > .navbar-item:last-child:hover,
   .navbar-end > .navbar-link:last-child:hover {
     border-top-right-radius: 5px;
