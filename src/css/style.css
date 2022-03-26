@@ -288,6 +288,18 @@ a.is-muted:hover {
   font-size: .75rem;
 }
 
+.list {
+  background-color: unset;
+  border-radius: 0;
+  box-shadow: none;
+  margin: .5rem 0;
+}
+
+.list svg {
+  margin-right: 5px;
+  color: var(--destaque);
+}
+
   .navbar-end > .navbar-item:last-child:hover,
   .navbar-end > .navbar-link:last-child:hover {
     border-top-right-radius: 5px;
