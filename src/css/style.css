@@ -272,10 +272,6 @@ a.is-muted:hover {
   .container>.navbar .navbar-menu, .navbar>.container .navbar-menu {
     margin-right: 0;
   }
-
-  .equipe li:nth-child(3n):not(:last-child) {
-    margin-bottom: 2rem;
-  }
 }
 
 @media screen and (max-width: 1023px) {
@@ -301,13 +297,4 @@ a.is-muted:hover {
   .article-thumbnail {
     height: 200px;
   }
-}
-
-@media screen and (max-width: 768px) {
-  .equipe li {
-    width: 50%;
-}
-
-.equipe li:nth-child(2n):not(:last-child) {
-    margin-bottom: 2rem;
 }
