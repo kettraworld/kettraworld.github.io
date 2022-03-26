@@ -264,6 +264,29 @@ a.is-muted:hover {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+.equipe li {
+  width: 33.33333%;
+  text-align: center;
+}
+
+.equipe img {
+  transition: all .2s ease;
+}
+
+.equipe li:hover img {
+  transform: translateY(-3px);
+}
+
+.equipe h1, .produtos h1 {
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+.equipe h2 {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: .75rem;
+}
 
   .navbar-end > .navbar-item:last-child:hover,
   .navbar-end > .navbar-link:last-child:hover {
