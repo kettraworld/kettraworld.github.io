@@ -259,67 +259,6 @@ a.is-muted:hover {
   }
 }
 
-.equipe {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-.equipe li {
-  width: 33.33333%;
-  text-align: center;
-}
-
-.equipe img {
-  transition: all .2s ease;
-}
-
-.equipe li:hover img {
-  transform: translateY(-3px);
-}
-
-.equipe h1 {
-  font-size: 1.5rem;
-  line-height: 1.25;
-}
-
-.equipe h2 {
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: .75rem;
-}
-
-.list {
-  background-color: unset;
-  border-radius: 0;
-  box-shadow: none;
-  margin: .5rem 0;
-}
-
-.list svg {
-  margin-right: 5px;
-  color: var(--destaque);
-}
-
-.button.is-primary {
-  background-color: var(--destaque);
-  border-color: var(--destaque);
-}
-
-.button.is-primary:hover,
-.button.is-primary:focus,
-.button.is-primary:active {
-  background-color: var(--destaque-escuro);
-  border-color: var(--destaque-escuro);
-}
-
-@media screen and (min-width: 1024px) {
-  .navbar-start > .navbar-item:first-child:hover,
-  .navbar-start > .navbar-link:first-child:hover {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-  }
-  
   .navbar-end > .navbar-item:last-child:hover,
   .navbar-end > .navbar-link:last-child:hover {
     border-top-right-radius: 5px;
