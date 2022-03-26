@@ -278,7 +278,7 @@ a.is-muted:hover {
   transform: translateY(-3px);
 }
 
-.equipe h1, .produtos h1 {
+.equipe h1 {
   font-size: 1.5rem;
   line-height: 1.25;
 }
