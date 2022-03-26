@@ -367,7 +367,7 @@ a.is-muted:hover {
 @media screen and (max-width: 768px) {
   .equipe li {
     width: 50%;
-  }
+}
 
 .equipe li:nth-child(2n):not(:last-child) {
     margin-bottom: 2rem;
