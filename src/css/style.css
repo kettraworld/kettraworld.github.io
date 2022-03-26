@@ -20,7 +20,10 @@
   --twitch: #9046ff;
   --twitter: #00BFFF;
 }
-
+.cor-A2A{color:#FF7F00}
+.cor-ABC{color: #E700FF}
+.cor-CBA{color: #8A2700}
+.cor-CBC{color: #0055FF}
 button {
   cursor: pointer;
   text-align: center;
@@ -369,8 +372,3 @@ a.is-muted:hover {
   .equipe li:nth-child(2n):not(:last-child) {
     margin-bottom: 2rem;
   }
-  
-.cor-A2A{color:#FF7F00}
-.cor-ABC{color: #E700FF}
-.cor-CBA{color: #8A2700}
-.cor-CBC{color: #0055FF}
