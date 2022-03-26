@@ -369,6 +369,6 @@ a.is-muted:hover {
     width: 50%;
   }
 
-  .equipe li:nth-child(2n):not(:last-child) {
+.equipe li:nth-child(2n):not(:last-child) {
     margin-bottom: 2rem;
-  }
+}
