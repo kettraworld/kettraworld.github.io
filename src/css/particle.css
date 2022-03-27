@@ -78,9 +78,9 @@
 h4 {
   color: #fff;
   font-family: Monoton;
-  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
-  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
-  animation: neon1 1.5s ease-in-out infinite alternate;
+  -webkit-animation: neon1 1.2s ease-in-out infinite alternate;
+  -moz-animation: neon1 1.2s ease-in-out infinite alternate;
+  animation: neon1 1.2s ease-in-out infinite alternate;
 }
 
 h4:hover {
