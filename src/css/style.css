@@ -60,7 +60,7 @@ a.navbar-item.is-active, a.navbar-link.is-active,
 .navbar-burger {
   color: #fff !important;
 }
-
+/* inicio do logp */
 .logo.container {
   display: flex;
   justify-content: var(--alinhar-logo);
@@ -75,6 +75,7 @@ a.navbar-item.is-active, a.navbar-link.is-active,
 .logo.container img:hover {
   transform: scale(1.1) rotate(2.5deg);
 }
+/* fim do logo */
 
 #ip textarea:not(.is-active) {
   display: none;
