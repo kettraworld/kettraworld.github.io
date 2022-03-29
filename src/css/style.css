@@ -292,43 +292,43 @@ button:hover {
           filter: drop-shadow(1px 1px 1px #e4e4e4);
 }
 
-.btn9 {
+.btn1 {
   background-color: var(--botão1);
   -webkit-filter: drop-shadow(8px 8px 1px #9400D3);
           filter: drop-shadow(8px 8px 1px #9400D3);
 }
 
-.btn9:hover {
+.btn1:hover {
   -webkit-filter: drop-shadow(1px 1px 1px #9400D3);
           filter: drop-shadow(1px 1px 1px #9400D3);
 }
-.btn10 {
+.btn2 {
   background-color: var(--botão2);
   -webkit-filter: drop-shadow(8px 8px 1px #008000);
           filter: drop-shadow(8px 8px 1px #008000);
 }
 
-.btn10:hover {
+.btn2:hover {
   -webkit-filter: drop-shadow(1px 1px 1px #008000);
           filter: drop-shadow(1px 1px 1px #008000);
 }
-.btn11 {
+.btn3 {
   background-color: var(--botão3);
   -webkit-filter: drop-shadow(8px 8px 1px #00CED1);
           filter: drop-shadow(8px 8px 1px #00CED1);
 }
 
-.btn11:hover {
+.btn3:hover {
   -webkit-filter: drop-shadow(1px 1px 1px #00CED1);
           filter: drop-shadow(1px 1px 1px #00CED1);
 }
-.btn12 {
+.btn4 {
   background-color: var(--botão4);
   -webkit-filter: drop-shadow(8px 8px 1px #FFA500);
           filter: drop-shadow(8px 8px 1px #FFA500);
 }
 
-.btn12:hover {
+.btn4:hover {
   -webkit-filter: drop-shadow(1px 1px 1px #FFA700);
           filter: drop-shadow(1px 1px 1px #FFA700);
 }
