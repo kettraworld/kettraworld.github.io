@@ -355,6 +355,7 @@ button:hover {
   -webkit-filter: drop-shadow(1px 1px 1px #fff935);
           filter: drop-shadow(1px 1px 1px #fff935);
 }
+
 @media screen and (max-width: 800px) {
   .buttons {
     width: 80px;
