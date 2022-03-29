@@ -340,14 +340,10 @@ button:hover {
           filter: drop-shadow(8px 8px 1px #00c2da);
 }
 
-.btn4:hover {
+.btn5:hover {
   -webkit-filter: drop-shadow(1px 1px 1px #00c2da);
           filter: drop-shadow(1px 1px 1px #00c2da);
 }
-
-
-
-
 
 @media screen and (max-width: 800px) {
   .buttons {
