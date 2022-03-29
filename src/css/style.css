@@ -4,7 +4,7 @@
   --destaque-escuro: #E500FF;
   --botão1: #A020F0;
   --botão2: #00FF00;
-  --botão3: #00FFFF;
+  --botão3: #fa0000;
   --botão4: #FF8C00;
   --botão5: #00f6ea;
 }
@@ -315,13 +315,13 @@ button:hover {
 }
 .btn3 {
   background-color: var(--botão3);
-  -webkit-filter: drop-shadow(8px 8px 1px #00CED1);
-          filter: drop-shadow(8px 8px 1px #00CED1);
+  -webkit-filter: drop-shadow(8px 8px 1px #ff2c2c);
+          filter: drop-shadow(8px 8px 1px #ff2c2c);
 }
 
 .btn3:hover {
-  -webkit-filter: drop-shadow(1px 1px 1px #00CED1);
-          filter: drop-shadow(1px 1px 1px #00CED1);
+  -webkit-filter: drop-shadow(1px 1px 1px #ff2c2c);
+          filter: drop-shadow(1px 1px 1px #ff2c2c);
 }
 .btn4 {
   background-color: var(--botão4);
