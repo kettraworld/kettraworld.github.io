@@ -15,11 +15,15 @@ uma linguagem de marcação, amplamente utilizada com HTML ou XHTML, e represent
   --botão6: #6129c6;
 }
 
+/*
+HTML é a linguagem de marcação padrão para documentos projetados para serem exibidos em um navegador da web. Ele pode ser auxiliado por tecnologias como Cascading Style Sheets e linguagens de script como JavaScript.
+*/
 html {
   scroll-behavior: smooth;
 }
 
-/* O body é o elemento no nosso documento responsável por ser o container de tudo que é conteúdo do site. Diferente do <head>, oque está dentro do <body> é oque fica/ou ficará disponível para visualização do visitante. As informações que queremos transmitir. Títulos, Textos, Imagens
+/* 
+O body é o elemento no nosso documento responsável por ser o container de tudo que é conteúdo do site. Diferente do <head>, oque está dentro do <body> é oque fica/ou ficará disponível para visualização do visitante. As informações que queremos transmitir. Títulos, Textos, Imagens
 */
 
 body {
