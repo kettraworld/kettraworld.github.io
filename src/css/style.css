@@ -49,6 +49,9 @@ header .navbar {
   border-radius: 5px;
 }
 
+/* O navbar é um componente de menu que fica localizado no topo da página e normalmente contém alguns links, além de um logotipo. Para usar esse componente no Materialize, basta construir a estrutura de elementos apresentada na Listagem 2.
+*/
+
 .navbar-item,
 .navbar-link {
   color: #fff;
