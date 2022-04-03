@@ -19,6 +19,9 @@ html {
   scroll-behavior: smooth;
 }
 
+/* O body é o elemento no nosso documento responsável por ser o container de tudo que é conteúdo do site. Diferente do <head>, oque está dentro do <body> é oque fica/ou ficará disponível para visualização do visitante. As informações que queremos transmitir. Títulos, Textos, Imagens
+*/
+
 body {
   min-height: 100vh;
   background-image: url('https://media.discordapp.net/attachments/933358218552442951/956941256402018304/download.jpeg');
