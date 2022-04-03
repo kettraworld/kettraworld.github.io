@@ -81,7 +81,8 @@ a.navbar-item.is-active, a.navbar-link.is-active,
 .navbar-burger {
   color: #fff !important;
 }
-/* inicio do logp */
+
+/* inicio do css responsalvel pelo logo */
 .logo.container {
   display: flex;
   justify-content: var(--alinhar-logo);
@@ -98,6 +99,7 @@ a.navbar-item.is-active, a.navbar-link.is-active,
 }
 /* fim do logo */
 
+/* inicio do css responsalvel pelo ip */
 #ip textarea:not(.is-active) {
   display: none;
 }
@@ -122,6 +124,7 @@ a.navbar-item.is-active, a.navbar-link.is-active,
   pointer-events: none;
   transform: translateY(0);
 }
+/* fim do css responsalfel pelo ip */
 
 main.section,
 footer.section {
