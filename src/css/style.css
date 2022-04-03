@@ -35,6 +35,10 @@ body {
   background-attachment: fixed;
 }
 
+/*
+o elemento head representa uma coleção de metadados para o documento. Metadados são, como o próprio nome diz, dados sobre os dados. De forma resumida, você poderá informar o navegador alguns detalhes sobre o conteúdo da página.
+*/
+
 header.section {
   padding-top: 2rem;
   padding-bottom: 2rem;
