@@ -1,4 +1,3 @@
-
 var ip = document.querySelector('#ip');
 var ipSpan = ip.querySelector('span');
 var ipTextarea = ip.querySelector('textarea');
