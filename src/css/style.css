@@ -378,6 +378,17 @@ button:hover {
           filter: drop-shadow(1px 1px 1px #c200fa);
 }
 
+.btn7 {
+  background-color: var(--botão6);
+  -webkit-filter: drop-shadow(8px 8px 1px #c200fa);
+          filter: drop-shadow(8px 8px 1px #c200fa);
+}
+
+.btn7:hover {
+  -webkit-filter: drop-shadow(1px 1px 1px #c200fa);
+          filter: drop-shadow(1px 1px 1px #c200fa);
+}
+
 @media screen and (max-width: 800px) {
   .buttons {
     width: 80px;
