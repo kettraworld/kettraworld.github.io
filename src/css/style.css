@@ -380,8 +380,8 @@ button:hover {
 
 .btn7 {
   background-color: var(--botão6);
-  -webkit-filter: drop-shadow(8px 8px 1px #c200fa);
-          filter: drop-shadow(8px 8px 1px #c200fa);
+  -webkit-filter: drop-shadow(8px 8px 1px #E700FF);
+          filter: drop-shadow(8px 8px 1px #E700FF);
 }
 
 .btn7:hover {
