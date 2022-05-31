@@ -3,6 +3,7 @@
 /* Styles */
 .particle, .particle:after {
   background: transparent;
+  position: absolute;
 }
 
 .particle:after
