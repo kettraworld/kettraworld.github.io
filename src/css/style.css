@@ -54,7 +54,7 @@ header .navbar {
 
 .navbar-item,
 .navbar-link {
-  color: #4a4a4a;
+  color: #fff;
 }
 
 .navbar-item svg,
@@ -63,7 +63,7 @@ header .navbar {
 }
 
 .navbar-dropdown .navbar-item {
-  color: #4a4a4a;
+  color: #fff;
 }
 
 a.navbar-item:hover, a.navbar-link:hover,
@@ -71,15 +71,15 @@ a.navbar-item.is-active, a.navbar-link.is-active,
 .navbar-item.has-dropdown:hover .navbar-link,
 .navbar-item.has-dropdown.is-active .navbar-link {
   background-color: rgba(0, 0, 0, .25);
-  color: #5d5d5d; /* #4a4a4a */
+  color: #5d5d5d; /* #fff */
 }
 
 .navbar-link:not(.is-arrowless)::after {
-  border-color: #4a4a4a;
+  border-color: #fff;
 }
 
 .navbar-burger {
-  color: #4a4a4a !important;
+  color: #fff !important;
 }
 
 /* inicio do css responsalvel pelo logo */
@@ -109,7 +109,7 @@ a.navbar-item.is-active, a.navbar-link.is-active,
   position: absolute;
   top: calc(50% - 12px);
   left: -90px;
-  color: #4a4a4a;
+  color: #fff;
   background-color: #48c774;
   padding: 0 .5rem;
   border-radius: 5px;
@@ -271,7 +271,7 @@ a.is-muted:hover {
   }
 
   .navbar-dropdown .navbar-item {
-    color: #4a4a4a;
+    color: #fff;
   }
 
   #ip::before {
@@ -298,7 +298,7 @@ button {
   text-align: center;
   border-radius: 0.5rem;
   font-family: "Poppins", sans-serif;
-  color: #4a4a4a;
+  color: #fff;
   margin: 1.5rem 1rem;
   background-color: white;
   border-style: none;
