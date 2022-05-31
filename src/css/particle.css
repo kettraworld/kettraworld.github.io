@@ -2,8 +2,7 @@
 /* mixins */
 /* Styles */
 .particle, .particle:after {
-/*  background: transparent;*/
-  
+  background: transparent;
 }
 
 .particle:after
