@@ -139,7 +139,7 @@ footer.section {
 .article-title {
   background-color: var(--destaque);
   font-size: 1.25rem;
-  color: #4a4a4a;
+  color:  #fff;
   padding: .5rem 1rem;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
