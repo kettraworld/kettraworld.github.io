@@ -29,7 +29,7 @@ header .navbar {
 
 .navbar-item,
 .navbar-link {
-  color: #fff;
+  color: #141517;
 }
 
 .navbar-item svg,
@@ -46,15 +46,15 @@ a.navbar-item.is-active, a.navbar-link.is-active,
 .navbar-item.has-dropdown:hover .navbar-link,
 .navbar-item.has-dropdown.is-active .navbar-link {
   background-color: rgba(0, 0, 0, .25);
-  color: #fff;
+  color: #141517;
 }
 
 .navbar-link:not(.is-arrowless)::after {
-  border-color: #fff;
+  border-color: #141517;
 }
 
 .navbar-burger {
-  color: #fff !important;
+  color: #141517 !important;
 }
 
 .logo.container {
@@ -81,7 +81,7 @@ a.navbar-item.is-active, a.navbar-link.is-active,
   position: absolute;
   top: calc(50% - 12px);
   left: -90px;
-  color: #fff;
+  color: #141517;
   background-color: #48c774;
   padding: 0 .5rem;
   border-radius: 5px;
@@ -110,7 +110,7 @@ footer.section {
 .article-title {
   background-color: var(--destaque);
   font-size: 1.25rem;
-  color: #fff;
+  color: #141517;
   padding: .5rem 1rem;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -121,7 +121,7 @@ footer.section {
 }
 
 .article-content {
-  background-color: #fff;
+  background-color: #141517;
   padding: 1rem;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -141,7 +141,7 @@ article.footer {
   flex-direction: column;
   background-color: var(--destaque);
   padding: 1rem;
-  color: #fff;
+  color: #141517;
   text-align: center;
   border-radius: 5px;
 }
@@ -306,7 +306,7 @@ a.is-muted:hover {
   }
 
   .navbar-dropdown .navbar-item {
-    color: #fff;
+    color: #141517;
   }
 
   #ip::before {
@@ -349,7 +349,7 @@ a.is-muted:hover {
 .cor-9{color:#3f3ffe}
 .cor-d{color:#fe3ffe}
 .cor-5{color:#be00be}
-.cor-f{color:#fff}
+.cor-f{color:#141517}
 .cor-7{color:#bebebe}
 .cor-8{color:#3f3f3f}
 .cor-0{color:#000}
