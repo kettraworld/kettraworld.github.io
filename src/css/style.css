@@ -54,7 +54,7 @@ header .navbar {
 
 .navbar-item,
 .navbar-link {
-  color: #fff;
+  color: #4a4a4a;
 }
 
 .navbar-item svg,
@@ -71,15 +71,15 @@ a.navbar-item.is-active, a.navbar-link.is-active,
 .navbar-item.has-dropdown:hover .navbar-link,
 .navbar-item.has-dropdown.is-active .navbar-link {
   background-color: rgba(0, 0, 0, .25);
-  color: #5d5d5d; /* #fff */
+  color: #5d5d5d; /* #4a4a4a */
 }
 
 .navbar-link:not(.is-arrowless)::after {
-  border-color: #fff;
+  border-color: #4a4a4a;
 }
 
 .navbar-burger {
-  color: #fff !important;
+  color: #4a4a4a !important;
 }
 
 /* inicio do css responsalvel pelo logo */
@@ -109,7 +109,7 @@ a.navbar-item.is-active, a.navbar-link.is-active,
   position: absolute;
   top: calc(50% - 12px);
   left: -90px;
-  color: #fff;
+  color: #4a4a4a;
   background-color: #48c774;
   padding: 0 .5rem;
   border-radius: 5px;
@@ -139,7 +139,7 @@ footer.section {
 .article-title {
   background-color: var(--destaque);
   font-size: 1.25rem;
-  color: #fff;
+  color: #4a4a4a;
   padding: .5rem 1rem;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -150,7 +150,7 @@ footer.section {
 }
 
 .article-content {
-  background-color: #fff;
+  background-color: #4a4a4a;
   padding: 1rem;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -170,7 +170,7 @@ article.footer {
   flex-direction: column;
   background-color: var(--destaque);
   padding: 1rem;
-  color: #fff;
+  color: #4a4a4a;
   text-align: center;
   border-radius: 5px;
 }
@@ -271,7 +271,7 @@ a.is-muted:hover {
   }
 
   .navbar-dropdown .navbar-item {
-    color: #fff;
+    color: #4a4a4a;
   }
 
   #ip::before {
@@ -298,7 +298,7 @@ button {
   text-align: center;
   border-radius: 0.5rem;
   font-family: "Poppins", sans-serif;
-  color: #fff;
+  color: #4a4a4a;
   margin: 1.5rem 1rem;
   background-color: white;
   border-style: none;
