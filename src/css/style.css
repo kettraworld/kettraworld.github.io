@@ -71,7 +71,7 @@ a.navbar-item.is-active, a.navbar-link.is-active,
 .navbar-item.has-dropdown:hover .navbar-link,
 .navbar-item.has-dropdown.is-active .navbar-link {
   background-color: rgba(0, 0, 0, .25);
-  color: #fff;
+  color: #5d5d5d; /* #fff */
 }
 
 .navbar-link:not(.is-arrowless)::after {
