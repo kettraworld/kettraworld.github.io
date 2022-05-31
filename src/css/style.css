@@ -29,8 +29,7 @@ O body é o elemento no nosso documento responsável por ser o container de tudo
 body {
   min-height: 100vh;
   background-image: url('https://media.discordapp.net/attachments/933358218552442951/956941256402018304/download.jpeg');
-  background-position: absolute;
-  position: absolute;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
