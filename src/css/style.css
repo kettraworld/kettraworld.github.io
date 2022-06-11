@@ -4,16 +4,13 @@
   --alinhar-logo: flex-start; /* flex-start (esquerda), center (meio) ou flex-end (direita) */
 }
 
-body, html {
-  margin:0;
-  padding:0;
-  border: none;
-}
-
 body {
  background: url(https://media.discordapp.net/attachments/936064707956203520/981227751858122772/IMG_20220531_130834.jpg)
  background-size: cover;
  background-position: center;
+}
+body, html {
+  height: 100%;
 }
 
 header.section {
