@@ -6,14 +6,10 @@
 
 body {
   background-color: #000000;
-  background-size: cover;
-  background-position: center;
 }
 
 body, html {
- padding:0;
- margin:0;
- height: 100vh;
+
 }
 
 header.section {
