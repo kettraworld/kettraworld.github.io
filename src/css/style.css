@@ -11,11 +11,9 @@ body, html {
 }
 
 body {
-background: url(https://media.discordapp.net/attachments/936064707956203520/981227751858122772/IMG_20220531_130834.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+ background: url(https://media.discordapp.net/attachments/936064707956203520/981227751858122772/IMG_20220531_130834.jpg)
+ background-size: cover;
+ background-position: center;
 }
 
 header.section {
