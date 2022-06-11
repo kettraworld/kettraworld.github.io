@@ -1,21 +1,43 @@
+/* css inicio, duvidas? não me pergunte so posso dizer que css é...
+
+uma linguagem de marcação, amplamente utilizada com HTML ou XHTML, e representa diversas possibilidades para a formatação. O CSS ajuda a editar, alinhar, remover e trabalhar no espaço entre elementos de uma página.
+*/
+
 :root {
+  --alinhar-logo: center;
   --destaque: #CE6D8B;
   --destaque-escuro: #CE6D8B;
-  --alinhar-logo: flex-start; /* flex-start (esquerda), center (meio) ou flex-end (direita) */
+  --botão1: #A020F0;
+  --botão2: #00FF00;
+  --botão3: #fa0000;
+  --botão4: #FF8C00;
+  --botão5: #00f6ea;
+  --botão6: #6129c6;
 }
 
-body{
-   overflow: hidden;
-   padding: 0;
-   margin: 0;
+/*
+HTML é a linguagem de marcação padrão para documentos projetados para serem exibidos em um navegador da web. Ele pode ser auxiliado por tecnologias como Cascading Style Sheets e linguagens de script como JavaScript.
+*/
+html {
+  scroll-behavior: smooth;
 }
 
-.max-width {
-     width: 100vw;
-     height: 100vh;
-     margin: auto;
-     background-color: #000000;
+/* 
+O body é o elemento no nosso documento responsável por ser o container de tudo que é conteúdo do site. Diferente do <head>, oque está dentro do <body> é oque fica/ou ficará disponível para visualização do visitante. As informações que queremos transmitir. Títulos, Textos, Imagens
+*/
+
+body {
+  min-height: 100vh;
+  background-image: url('https://media.discordapp.net/attachments/933358218552442951/956941256402018304/download.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
+
+/*
+o elemento head representa uma coleção de metadados para o documento. Metadados são, como o próprio nome diz, dados sobre os dados. De forma resumida, você poderá informar o navegador alguns detalhes sobre o conteúdo da página.
+*/
 
 header.section {
   padding-top: 2rem;
@@ -27,9 +49,12 @@ header .navbar {
   border-radius: 5px;
 }
 
+/* O navbar é um componente de menu que fica localizado no topo da página e normalmente contém alguns links, além de um logotipo. Para usar esse componente no Materialize, basta construir a estrutura de elementos apresentada na Listagem 2.
+*/
+
 .navbar-item,
 .navbar-link {
-  color: #141517;
+  color: #fff;
 }
 
 .navbar-item svg,
@@ -38,7 +63,7 @@ header .navbar {
 }
 
 .navbar-dropdown .navbar-item {
-  color: #4a4a4a;
+  color: #fff;
 }
 
 a.navbar-item:hover, a.navbar-link:hover,
@@ -46,17 +71,18 @@ a.navbar-item.is-active, a.navbar-link.is-active,
 .navbar-item.has-dropdown:hover .navbar-link,
 .navbar-item.has-dropdown.is-active .navbar-link {
   background-color: rgba(0, 0, 0, .25);
-  color: #141517;
+  color: #5d5d5d; /* #fff */
 }
 
 .navbar-link:not(.is-arrowless)::after {
-  border-color: #141517;
+  border-color: #fff;
 }
 
 .navbar-burger {
-  color: #141517 !important;
+  color: #fff !important;
 }
 
+/* inicio do css responsalvel pelo logo */
 .logo.container {
   display: flex;
   justify-content: var(--alinhar-logo);
@@ -71,7 +97,9 @@ a.navbar-item.is-active, a.navbar-link.is-active,
 .logo.container img:hover {
   transform: scale(1.1) rotate(2.5deg);
 }
+/* fim do logo */
 
+/* inicio do css responsalvel pelo ip */
 #ip textarea:not(.is-active) {
   display: none;
 }
@@ -81,7 +109,7 @@ a.navbar-item.is-active, a.navbar-link.is-active,
   position: absolute;
   top: calc(50% - 12px);
   left: -90px;
-  color: #141517;
+  color: #fff;
   background-color: #48c774;
   padding: 0 .5rem;
   border-radius: 5px;
@@ -96,6 +124,7 @@ a.navbar-item.is-active, a.navbar-link.is-active,
   pointer-events: none;
   transform: translateY(0);
 }
+/* fim do css responsalfel pelo ip */
 
 main.section,
 footer.section {
@@ -110,7 +139,7 @@ footer.section {
 .article-title {
   background-color: var(--destaque);
   font-size: 1.25rem;
-  color: #141517;
+  color:  #fff;
   padding: .5rem 1rem;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -141,7 +170,7 @@ article.footer {
   flex-direction: column;
   background-color: var(--destaque);
   padding: 1rem;
-  color: #141517;
+  color:  #fff;
   text-align: center;
   border-radius: 5px;
 }
@@ -160,6 +189,7 @@ a.is-muted:hover {
   animation: spin 2s infinite linear;
 }
 
+/* inicio da equipe */
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -169,25 +199,11 @@ a.is-muted:hover {
   }
 }
 
-.equipe, .produtos {
+.equipe {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-
-.produtos li {
-  width: 25%;
-  text-align: center;
-}
-
-.produtos li:nth-child(4n):not(:last-child) {
-  margin-bottom: 2rem;
-}
-
-.produtos img {
-  height: 128px;
-}
-
 .equipe li {
   width: 33.33333%;
   text-align: center;
@@ -212,14 +228,6 @@ a.is-muted:hover {
   font-size: .75rem;
 }
 
-.produtos h2 small {
-  font-size: .75rem;
-}
-
-.produtos .buttons {
-  margin-top: 5px;
-}
-
 .list {
   background-color: unset;
   border-radius: 0;
@@ -231,50 +239,8 @@ a.is-muted:hover {
   margin-right: 5px;
   color: var(--destaque);
 }
+/* fim da equipe */
 
-.button.is-primary {
-  background-color: var(--destaque);
-  border-color: var(--destaque);
-}
-
-.button.is-primary:hover,
-.button.is-primary:focus,
-.button.is-primary:active {
-  background-color: var(--destaque-escuro);
-  border-color: var(--destaque-escuro);
-}
-
-.produto-sidebar .article-content {
-  text-align: center;
-}
-
-.produto-sidebar img {
-  height: 128px;
-}
-
-.produto-sidebar h1 {
-  font-size: 1.5rem;
-}
-
-.produto-sidebar h1 small {
-  font-size: 1rem;
-}
-
-.produto-sidebar .field {
-  margin-top: 1rem;
-}
-
-.produto-sidebar .field .control.is-fullwidth {
-  flex-grow: 1;
-}
-
-@media screen and (min-width: 1024px) {
-  .navbar-start > .navbar-item:first-child:hover,
-  .navbar-start > .navbar-link:first-child:hover {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-  }
-  
   .navbar-end > .navbar-item:last-child:hover,
   .navbar-end > .navbar-link:last-child:hover {
     border-top-right-radius: 5px;
@@ -288,8 +254,7 @@ a.is-muted:hover {
   .container>.navbar .navbar-menu, .navbar>.container .navbar-menu {
     margin-right: 0;
   }
-
-  .equipe li:nth-child(3n):not(:last-child) {
+    .equipe li:nth-child(3n):not(:last-child) {
     margin-bottom: 2rem;
   }
 }
@@ -298,7 +263,7 @@ a.is-muted:hover {
   .logo.container {
     justify-content: center;
   }
-
+}
   .navbar-menu {
     background: var(--destaque-escuro);
     border-bottom-left-radius: 5px;
@@ -306,7 +271,7 @@ a.is-muted:hover {
   }
 
   .navbar-dropdown .navbar-item {
-    color: #141517;
+    color: #fff;
   }
 
   #ip::before {
@@ -317,39 +282,536 @@ a.is-muted:hover {
   .article-thumbnail {
     height: 200px;
   }
-}
 
 @media screen and (max-width: 768px) {
   .equipe li {
     width: 50%;
   }
-
   .equipe li:nth-child(2n):not(:last-child) {
-    margin-bottom: 2rem;
-  }
-
-  .produtos li {
-    width: 100%;
-  }
-  
-  .produtos li:not(:last-child) {
     margin-bottom: 2rem;
   }
 }
 
-.cor-4{color:#be0000}
-.cor-c{color:#fe3f3f}
-.cor-6{color:#d9a334}
-.cor-e{color:#fefe3f}
-.cor-2{color:#00be00}
-.cor-a{color:#3ffe3f}
-.cor-b{color:#3ffefe}
-.cor-3{color:#00bebe}
-.cor-1{color:#0000be}
-.cor-9{color:#3f3ffe}
-.cor-d{color:#fe3ffe}
-.cor-5{color:#be00be}
-.cor-f{color:#141517}
-.cor-7{color:#bebebe}
-.cor-8{color:#3f3f3f}
-.cor-0{color:#000}
+/* inicio dos botoes */
+button {
+  cursor: pointer;
+  text-align: center;
+  border-radius: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  margin: 1.5rem 1rem;
+  background-color: white;
+  border-style: none;
+  font-size: 1.5rem;
+  padding: 0.2rem 1rem;
+  -webkit-filter: drop-shadow(8px 8px 1px #e4e4e4);
+          filter: drop-shadow(8px 8px 1px #e4e4e4);
+  -webkit-transition: 0.1s;
+  transition: 0.3s;
+}
+
+button:hover {
+  border-radius: 0.4rem;
+  -webkit-filter: drop-shadow(1px 1px 1px #e4e4e4);
+          filter: drop-shadow(1px 1px 1px #e4e4e4);
+}
+
+.btn1 {
+  background-color: var(--botão1);
+  -webkit-filter: drop-shadow(8px 8px 1px #9400D3);
+          filter: drop-shadow(8px 8px 1px #9400D3);
+}
+
+.btn1:hover {
+  -webkit-filter: drop-shadow(1px 1px 1px #9400D3);
+          filter: drop-shadow(1px 1px 1px #9400D3);
+}
+.btn2 {
+  background-color: var(--botão2);
+  -webkit-filter: drop-shadow(8px 8px 1px #008000);
+          filter: drop-shadow(8px 8px 1px #008000);
+}
+
+.btn2:hover {
+  -webkit-filter: drop-shadow(1px 1px 1px #008000);
+          filter: drop-shadow(1px 1px 1px #008000);
+}
+.btn3 {
+  background-color: var(--botão3);
+  -webkit-filter: drop-shadow(8px 8px 1px #ff2c2c);
+          filter: drop-shadow(8px 8px 1px #ff2c2c);
+}
+
+.btn3:hover {
+  -webkit-filter: drop-shadow(1px 1px 1px #ff2c2c);
+          filter: drop-shadow(1px 1px 1px #ff2c2c);
+}
+.btn4 {
+  background-color: var(--botão4);
+  -webkit-filter: drop-shadow(8px 8px 1px #FFA500);
+          filter: drop-shadow(8px 8px 1px #FFA500);
+}
+
+.btn4:hover {
+  -webkit-filter: drop-shadow(1px 1px 1px #FFA700);
+          filter: drop-shadow(1px 1px 1px #FFA700);
+}
+
+.btn5 {
+  background-color: var(--botão5);
+  -webkit-filter: drop-shadow(8px 8px 1px #00c2da);
+          filter: drop-shadow(8px 8px 1px #00c2da);
+}
+
+.btn5:hover {
+  -webkit-filter: drop-shadow(1px 1px 1px #00c2da);
+          filter: drop-shadow(1px 1px 1px #00c2da);
+}
+.btn6 {
+  background-color: var(--botão6);
+  -webkit-filter: drop-shadow(8px 8px 1px #c200fa);
+          filter: drop-shadow(8px 8px 1px #c200fa);
+}
+
+.btn6:hover {
+  -webkit-filter: drop-shadow(1px 1px 1px #c200fa);
+          filter: drop-shadow(1px 1px 1px #c200fa);
+}
+
+.btn7 {
+  background-color: var(--botão6);
+  -webkit-filter: drop-shadow(8px 8px 1px #E700FF);
+          filter: drop-shadow(8px 8px 1px #E700FF);
+}
+
+.btn7:hover {
+  -webkit-filter: drop-shadow(1px 1px 1px #c200fa);
+          filter: drop-shadow(1px 1px 1px #c200fa);
+}
+
+@media screen and (max-width: 800px) {
+  .buttons {
+    width: 80px;
+  }
+}
+
+/* finap dos botoes */
+
+.cor-A2A{color: #FF7F00}
+
+/* semi-deuses */
+.cor-ABC{color: #E700FF}
+
+/* arcanjos */
+.cor-CBA{color: #8A2700}
+
+/* anjo */
+/* css inicio, duvidas? não me pergunte so posso dizer que css é...
+
+uma linguagem de marcação, amplamente utilizada com HTML ou XHTML, e representa diversas possibilidades para a formatação. O CSS ajuda a editar, alinhar, remover e trabalhar no espaço entre elementos de uma página.
+*/
+
+:root {
+  --alinhar-logo: center;
+  --destaque: #CE6D8B;
+  --destaque-escuro: #CE6D8B;
+  --botão1: #A020F0;
+  --botão2: #00FF00;
+  --botão3: #fa0000;
+  --botão4: #FF8C00;
+  --botão5: #00f6ea;
+  --botão6: #6129c6;
+}
+
+/*
+HTML é a linguagem de marcação padrão para documentos projetados para serem exibidos em um navegador da web. Ele pode ser auxiliado por tecnologias como Cascading Style Sheets e linguagens de script como JavaScript.
+*/
+html {
+  scroll-behavior: smooth;
+}
+
+/* 
+O body é o elemento no nosso documento responsável por ser o container de tudo que é conteúdo do site. Diferente do <head>, oque está dentro do <body> é oque fica/ou ficará disponível para visualização do visitante. As informações que queremos transmitir. Títulos, Textos, Imagens
+*/
+
+body {
+  min-height: 100vh;
+  background-image: url('https://media.discordapp.net/attachments/933358218552442951/956941256402018304/download.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/*
+o elemento head representa uma coleção de metadados para o documento. Metadados são, como o próprio nome diz, dados sobre os dados. De forma resumida, você poderá informar o navegador alguns detalhes sobre o conteúdo da página.
+*/
+
+header.section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+header .navbar {
+  background-color: var(--destaque);
+  border-radius: 5px;
+}
+
+/* O navbar é um componente de menu que fica localizado no topo da página e normalmente contém alguns links, além de um logotipo. Para usar esse componente no Materialize, basta construir a estrutura de elementos apresentada na Listagem 2.
+*/
+
+.navbar-item,
+.navbar-link {
+  color: #fff;
+}
+
+.navbar-item svg,
+.navbar-link svg {
+  margin-right: .25rem;
+}
+
+.navbar-dropdown .navbar-item {
+  color: #fff;
+}
+
+a.navbar-item:hover, a.navbar-link:hover,
+a.navbar-item.is-active, a.navbar-link.is-active,
+.navbar-item.has-dropdown:hover .navbar-link,
+.navbar-item.has-dropdown.is-active .navbar-link {
+  background-color: rgba(0, 0, 0, .25);
+  color: #5d5d5d; /* #fff */
+}
+
+.navbar-link:not(.is-arrowless)::after {
+  border-color: #fff;
+}
+
+.navbar-burger {
+  color: #fff !important;
+}
+
+/* inicio do css responsalvel pelo logo */
+.logo.container {
+  display: flex;
+  justify-content: var(--alinhar-logo);
+  margin-bottom: 2rem;
+}
+
+.logo.container img {
+  max-height: 100px;
+  transition: all .2s ease-out;
+}
+
+.logo.container img:hover {
+  transform: scale(1.1) rotate(2.5deg);
+}
+/* fim do logo */
+
+/* inicio do css responsalvel pelo ip */
+#ip textarea:not(.is-active) {
+  display: none;
+}
+
+#ip::before {
+  content: 'Copiado';
+  position: absolute;
+  top: calc(50% - 12px);
+  left: -90px;
+  color: #fff;
+  background-color: #48c774;
+  padding: 0 .5rem;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(2px);
+  transition: all .25s ease;
+}
+
+#ip.is-active::before {
+  opacity: 1;
+  pointer-events: none;
+  transform: translateY(0);
+}
+/* fim do css responsalfel pelo ip */
+
+main.section,
+footer.section {
+  padding-top: 0;
+  padding-bottom: 2rem;
+}
+
+.article:not(:first-child) {
+  margin-top: 1.5rem;
+}
+
+.article-title {
+  background-color: var(--destaque);
+  font-size: 1.25rem;
+  color:  #fff;
+  padding: .5rem 1rem;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.article-title svg {
+  margin-right: .25rem;
+}
+
+.article-content {
+  background-color: #141517;
+  padding: 1rem;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  /* min-height: 500px; */
+}
+
+.article-thumbnail {
+  width: 100%;
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+article.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--destaque);
+  padding: 1rem;
+  color:  #fff;
+  text-align: center;
+  border-radius: 5px;
+}
+
+a.is-muted {
+  color: inherit;
+  font-size: .8rem;
+  opacity: .5;
+}
+
+a.is-muted:hover {
+  opacity: 1;
+}
+
+.is-spinning {
+  animation: spin 2s infinite linear;
+}
+
+/* inicio da equipe */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.equipe {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.equipe li {
+  width: 33.33333%;
+  text-align: center;
+}
+
+.equipe img {
+  transition: all .2s ease;
+}
+
+.equipe li:hover img {
+  transform: translateY(-3px);
+}
+
+.equipe h1, .produtos h1 {
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+.equipe h2 {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: .75rem;
+}
+
+.list {
+  background-color: unset;
+  border-radius: 0;
+  box-shadow: none;
+  margin: .5rem 0;
+}
+
+.list svg {
+  margin-right: 5px;
+  color: var(--destaque);
+}
+/* fim da equipe */
+
+  .navbar-end > .navbar-item:last-child:hover,
+  .navbar-end > .navbar-link:last-child:hover {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  .container>.navbar .navbar-brand, .navbar>.container .navbar-brand {
+    margin-left: 0;
+  }
+
+  .container>.navbar .navbar-menu, .navbar>.container .navbar-menu {
+    margin-right: 0;
+  }
+    .equipe li:nth-child(3n):not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .logo.container {
+    justify-content: center;
+  }
+}
+  .navbar-menu {
+    background: var(--destaque-escuro);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  .navbar-dropdown .navbar-item {
+    color: #fff;
+  }
+
+  #ip::before {
+    left: unset;
+    right: .5rem;
+  }
+
+  .article-thumbnail {
+    height: 200px;
+  }
+
+@media screen and (max-width: 768px) {
+  .equipe li {
+    width: 50%;
+  }
+  .equipe li:nth-child(2n):not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+/* inicio dos botoes */
+button {
+  cursor: pointer;
+  text-align: center;
+  border-radius: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  margin: 1.5rem 1rem;
+  background-color: white;
+  border-style: none;
+  font-size: 1.5rem;
+  padding: 0.2rem 1rem;
+  -webkit-filter: drop-shadow(8px 8px 1px #e4e4e4);
+          filter: drop-shadow(8px 8px 1px #e4e4e4);
+  -webkit-transition: 0.1s;
+  transition: 0.3s;
+}
+
+button:hover {
+  border-radius: 0.4rem;
+  -webkit-filter: drop-shadow(1px 1px 1px #e4e4e4);
+          filter: drop-shadow(1px 1px 1px #e4e4e4);
+}
+
+.btn1 {
+  background-color: var(--botão1);
+  -webkit-filter: drop-shadow(8px 8px 1px #9400D3);
+          filter: drop-shadow(8px 8px 1px #9400D3);
+}
+
+.btn1:hover {
+  -webkit-filter: drop-shadow(1px 1px 1px #9400D3);
+          filter: drop-shadow(1px 1px 1px #9400D3);
+}
+.btn2 {
+  background-color: var(--botão2);
+  -webkit-filter: drop-shadow(8px 8px 1px #008000);
+          filter: drop-shadow(8px 8px 1px #008000);
+}
+
+.btn2:hover {
+  -webkit-filter: drop-shadow(1px 1px 1px #008000);
+          filter: drop-shadow(1px 1px 1px #008000);
+}
+.btn3 {
+  background-color: var(--botão3);
+  -webkit-filter: drop-shadow(8px 8px 1px #ff2c2c);
+          filter: drop-shadow(8px 8px 1px #ff2c2c);
+}
+
+.btn3:hover {
+  -webkit-filter: drop-shadow(1px 1px 1px #ff2c2c);
+          filter: drop-shadow(1px 1px 1px #ff2c2c);
+}
+.btn4 {
+  background-color: var(--botão4);
+  -webkit-filter: drop-shadow(8px 8px 1px #FFA500);
+          filter: drop-shadow(8px 8px 1px #FFA500);
+}
+
+.btn4:hover {
+  -webkit-filter: drop-shadow(1px 1px 1px #FFA700);
+          filter: drop-shadow(1px 1px 1px #FFA700);
+}
+
+.btn5 {
+  background-color: var(--botão5);
+  -webkit-filter: drop-shadow(8px 8px 1px #00c2da);
+          filter: drop-shadow(8px 8px 1px #00c2da);
+}
+
+.btn5:hover {
+  -webkit-filter: drop-shadow(1px 1px 1px #00c2da);
+          filter: drop-shadow(1px 1px 1px #00c2da);
+}
+.btn6 {
+  background-color: var(--botão6);
+  -webkit-filter: drop-shadow(8px 8px 1px #c200fa);
+          filter: drop-shadow(8px 8px 1px #c200fa);
+}
+
+.btn6:hover {
+  -webkit-filter: drop-shadow(1px 1px 1px #c200fa);
+          filter: drop-shadow(1px 1px 1px #c200fa);
+}
+
+.btn7 {
+  background-color: var(--botão6);
+  -webkit-filter: drop-shadow(8px 8px 1px #E700FF);
+          filter: drop-shadow(8px 8px 1px #E700FF);
+}
+
+.btn7:hover {
+  -webkit-filter: drop-shadow(1px 1px 1px #c200fa);
+          filter: drop-shadow(1px 1px 1px #c200fa);
+}
+
+@media screen and (max-width: 800px) {
+  .buttons {
+    width: 80px;
+  }
+}
+
+/* finap dos botoes */
+
+.cor-A2A{color: #FF7F00}
+
+/* semi-deuses */
+.cor-ABC{color: #E700FF}
+
+/* arcanjos */
+.cor-CBA{color: #8A2700}
+
+/* anjo */
+.cor-CBC{color: #0055FF}
