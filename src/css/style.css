@@ -5,9 +5,12 @@
 }
 
 body {
- background: url(https://media.discordapp.net/attachments/936064707956203520/981227751858122772/IMG_20220531_130834.jpg)
- background-size: cover;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: fixed;
 }
+
 body, html {
   height: 100%;
 }
