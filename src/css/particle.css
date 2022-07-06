@@ -4,8 +4,7 @@
 .particle, .particle:after {
   background: transparent;
 }
-
-.particle:after
+.particle:after {
   top: 2560px;
 }
 .particle-1 {
