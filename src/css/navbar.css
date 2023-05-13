@@ -1,0 +1,72 @@
+
+:root {
+	--layout: #b85870;
+	--layout-dark: #b05068;
+}
+
+/* beginning of the css responsible for styling the navbar */ 
+
+.navbar {
+	max-width: 1200px;
+	margin: 0 auto;
+	border-bottom-left-radius: 1.3pc;
+	border-bottom-right-radius: 1.3pc;
+	background: linear-gradient(to bottom, #b85870, #b85867);
+}
+
+.custom-toggler {
+	border-radius: 8px;
+	margin-bottom: 8px;
+	border: 1.4px solid var(--layout-dark);
+}
+
+.custom-toggler:focus {
+	outline: none;
+}
+
+.custom-toggler:hover {
+	opacity: 0.6;
+	cursor: pointer;
+	box-shadow: 1.3px 1.3px 3.9px #000000;
+}
+
+.navbar-toggler-icon {
+	background-image: url('https://cdn.discordapp.com/attachments/1078405618139922532/1093536031929798686/redbed.png');
+	background-size: cover;
+}
+
+.navbar-collapse,
+.dropdown-menu {
+	padding: 6px;
+	color: #fff;
+	border-radius: 10px;
+	background-color: var(--layout-dark);
+}
+
+.nav-link,
+.dropdown-item,
+.dropdown-item:focus {
+	color: #fff;
+}
+
+.nav-link:hover,
+.dropdown-item:hover {
+	color: #000000a3;
+	background-color: var(--layout-dark);
+}
+
+.ipcopy {
+	padding: 7px;
+	color: #fff;
+	cursor: pointer;
+	border-radius: 25px;
+	background-color: var(--layout-dark);
+}
+
+.ipcopy span {
+	font-size: 13px;
+	font-family: 'Chiller', fantasy;
+	color: #fff;
+}
+
+/* End of styling used for navbar */

@@ -1,0 +1,61 @@
+main.cards {
+  padding: 20px;
+}
+
+main.cards section.card {
+ display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #484848c8;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  max-height: 460px;
+  margin: 10px
+}
+
+main.cards section.card .icon {
+  width: 72px;
+  height: 72px;
+}
+
+main.cards section.card img {
+  width: 100%;
+}
+
+main.cards section.card h3 {
+  color: #fff;
+  font-size: 19px;
+  margin: 10px;
+  text-align: center;
+  font-family: 'medieval';
+}
+
+main.cards section.card span {
+  font-weight: 300;
+  max-width: 240px;
+  font-family: 'medieval';
+  color: #fff;
+  font-size: 80%;
+  margin-bottom: 16px;
+}
+
+main.cards section.card button {
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  border-radius: 32px;
+  border: 0;
+  cursor: pointer;
+  font-size: 80%;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+main.cards section.card button.shop {
+  background: linear-gradient(to right, #b85870, #b05068);
+}
+
+main.cards section.card.shop {
+  box-shadow: 20px 20px 50px -30px #afd6ff;
+}
