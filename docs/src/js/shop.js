@@ -11,7 +11,7 @@ $(document).ready(() => {
       <h3>${product.data.name}</h3>
       <span>${product.data.description}</span>
       <a href="/payment.html?product=${product.ID}">
-      <button class="container valor">R$ ${product.data.value}</button>
+      <button class="container valor">R$ ${product.data.price}</button>
       </a>
       </section>
       `;
