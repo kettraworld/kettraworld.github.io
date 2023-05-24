@@ -1,8 +1,8 @@
 $(document).ready(() => {
-  axios.get('https://api.kettraworld.shop/product').then((result) => {
-    const itens = result.data;
-    let cards = '';
-  itens.forEach(product => {
+  
+ $.getJSON('https://api.kettraworld.shop/product', (data) => { 
+   let cards = '';
+   data.forEach(product => {
       const card = `
       <section class="card shop">
       <div class="icon">
@@ -18,5 +18,5 @@ $(document).ready(() => {
       cards += card;
     });
     $('#shop').html(cards);
-  });
+ });
 });
