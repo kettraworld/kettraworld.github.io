@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 
 <head>
-  <!-- SEO - about showing up in searches --->
+  <!-- SEO - about showing up in searches -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <meta http-equiv=”content-language” content=”pt-br”>
@@ -24,8 +24,8 @@
   <meta name="google-site-verification" content="r2ZC_TBmtnPWQE8N-_uHNBOnQccYfTnKGwMiw_8uOz8" />
   <link rel="apple-touch-icon" href="src/img/favicon.png" />
   <link rel="shortcut icon" href="src/img/favicon.ico" type="image/x-icon" />
-  <!--- end SEO --->
-  <!--- starting to load the style --->
+  <!-- end SEO -->
+  <!-- starting to load the style -->
   <script src="src/js/book.js" type="text/javascript" charset="utf-8"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" type="text/css"
     media="all" />
@@ -38,18 +38,18 @@
   <link rel="stylesheet" href="src/css/particles.css">
   <link rel="stylesheet" href="src/css/cards.css">
   <link rel="stylesheet" href="src/css/navbar.css">
-  <!--- end to load the style --->
+  <!-- end to load the style -->
 </head>
-<!-- start screen view --->
+<!-- start screen view -->
 
 <body class="challenge">
-  <!--- start particles --->
+  <!-- start particles -->
   <div class="particle particle-1"></div>
   <div class="particle particle-2"></div>
   <div class="particle particle-3"></div>
   <div class="particle particle-4"></div>
-  <!--- end particles --->
-  <!--- Home of navbar--->
+  <!-- end particles -->
+  <!-- Home of navbar-->
   <div class="container">
     <nav class="navbar navbar-expand-lg">
       <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
@@ -92,8 +92,8 @@
       </div>
     </nav>
   </div>
-  <!--- end of navbar --->
-  <!--- start of card --->
+  <!-- end of navbar -->
+  <!-- start of card -->
   <main class="section">
     <div class="container">
       <div class="columns">
@@ -170,62 +170,63 @@
       </div>
     </div>
   </main>
-  <!--- end of card --->
-  <!--- start coookie --->
+  <!-- end of card -->
+  <!--start coookie -->
   <cookie class="cookie">
     <i class="fas fa-cookie"></i>
     Bem-vindo(a) ao site de Kettra! Nós utilizamos cookies para personalizar conteúdos e anúncios para melhorar sua
     experiência. Ao continuar navegando, você concorda com a nossa <a href="#null">Política de Privacidade</a>.
     <button id="cookie">Aceitar</button>
   </cookie>
-  <!--- end coookie --->
-  <!--- start of footer --->
+  <!-- end coookie -->
+  <!-- start of footer -->
   <footer class="footer">
     <a href="https://github.com/kettraworld" target="_blank"><i class="fab fa-fort-awesome"></i> Developed by the kettra
       team</a>
   </footer>
-  <!--- end of footer --->
+  <!-- end of footer -->
 </body>
-<!--- end screen view --->
-<!--- scripts used on the website --->
-<script type="text/javascript" charset="utf-8">
-var pages = document.querySelectorAll(".page");
-var currentPage = 0; 
-var Previous = document.getElementById("previous"); 
-var Next = document.getElementById("next");
-
- function showPage(page) {
-
-  pages[currentPage].style.display = "none";
-  pages[page].style.display = "block";
-  currentPage = page;
-
-  if (currentPage === 0) {
-    Previous.style.display = "none";
-  } else {
-    Previous.style.display = "block";
-  }
-
-  if (currentPage === pages.length - 1) {
-    Next.style.display = "none";
-  } else {
-    Next.style.display = "block";
-  }
- }
-
-  Previous.style.display = "none";
-  Next.addEventListener("click", () => {
-    showPage(currentPage + 1);
-  });
-
-  Previous.addEventListener("click", () => {
-    showPage(currentPage - 1);
-  });    
-</script>
+<!-- end screen view -->
+<!-- scripts used on the website -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
   integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript" charset="utf-8">
+  $(document).ready(() => {
+  var pages = $(".page");
+  var currentPage = 0; 
+  var Previous = $("#previous"); 
+  var Next = $("#next");
+
+  function showPage(page) {
+    pages.eq(currentPage).hide();
+    pages.eq(page).show();
+    currentPage = page;
+
+    if (currentPage === 0) {
+      Previous.hide();
+    } else {
+      Previous.show();
+    }
+
+    if (currentPage === pages.length - 1) {
+      Next.hide();
+    } else {
+      Next.show();
+    }
+  }
+
+  Previous.hide();
+  Next.on("click", () => {
+    showPage(currentPage + 1);
+  });
+
+  Previous.on("click", () => {
+    showPage(currentPage - 1);
+  });
+});
+</script>
 <script type="text/javascript" charset="utf-8">
   $(document).ready(() => {
  $.getJSON('https://minecraft-mp.com/api/?object=servers&element=voters&key=qGf28ODBQJWj5fivrvDYDH7GdoFS5BxSMSd&month=current&format=json&limit=3', (data) => {
@@ -252,6 +253,6 @@ var Next = document.getElementById("next");
   integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="src/js/cookie.js" type="text/javascript" charset="utf-8"></script>
 <script src="src/js/status.js" type="text/javascript" charset="utf-8"></script>
-<!--- End of tag scripts used on the site --->
+<!-- End of tag scripts used on the site -->
 
 </html>
