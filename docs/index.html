@@ -26,6 +26,7 @@
   <link rel="shortcut icon" href="src/img/favicon.ico" type="image/x-icon" />
   <!--- end SEO --->
   <!--- starting to load the style --->
+  <script src="src/js/book.js" type="text/javascript" charset="utf-8"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" type="text/css"
     media="all" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
@@ -105,38 +106,52 @@
               </h2>
               <div class="article-content">
                 <div class="card card-rpg animate__animated animate__bounceIn">
-                  <img src="src/img/makadia.webp" class="card-img-top img-rpg" alt="Makadia" width="auto"
-                    height="auto" />
-                  <b class="title-rpg">❖ KettraWorld ❖</b>
-                  <p class="card-text-rpg">
-                    ■ KettraWorld é um servidor RPG medieval baseado no mundo fictício de Kettra. Lar da grande Deusa
-                    Amarantha e seus irmãos, que deram tudo de si para selar o imensurável poder da Deusa primogênita
-                    Tainith, que iria destruir o mundo conhecido na era como Koramund. Contudo, em benefício da
-                    sobrevivência deste mundo, o Deus Lydrin forjou um artefato que tornaria esse objetivo realidade.
-                    Assim, Amarantha conseguiu, com o sacrifício e aprisionamento dos outros dezesseis Deuses, o poder
-                    necessário para prender Tainith em um lugar no qual ela não conseguiria se soltar. Dessa forma,
-                    criou uma nova era, um novo mundo sem o medo e o caos que a Deusa trazia junto ao brilho de seu
-                    astro.<br />
-                    <br />
-                    ■ Como um romântico conto, o mal se esvaiu de nossa era, Amarantha salvou todos e fez Yutha brilhar
-                    por
-                    toda Kettra. No entanto, isso não foi o bastante. A influência da Deusa dos Espíritos fez com que as
-                    almas dos mortos que ainda não tinham partido vagassem pelo mundo e, juntos, criassem as criaturas
-                    da
-                    noite. Monstros que trouxeram a vingança de Tainith a Kettra.<br />
-                    <br />
-                    ■ Ao longo da história, o mundo cresceu e sobreviveu ao lado de Amarantha, lutando contra as
-                    criaturas
-                    de Tainith, com o objetivo de um dia erradicar todo esse mal do mundo e impedir as profecias que
-                    caíram
-                    sobre o nome do Astro. Nosso mundo sempre ensinou que não devemos pronunciar o seu nome para que não
-                    atrairmos sua terrível influência. Isso era o que todos pensavam até o surgimento de um grupo vindo
-                    de
-                    outra dimensão, que carregava o sangue do astro caído<br />
-                    <br />
-                    ■ Os filhos de Amarantha oram por ajuda, seja você a constelação que os céus de Kettra precisam para
-                    eliminar o poder maligno do Astro caído.
-                  </p>
+    <img src="src/img/makadia.webp" class="card-img-top img-rpg" alt="Makadia" width="auto" height="auto" />
+    <b class="title-rpg">❖ KettraWorld ❖</b>
+ <div>
+  <div class="page">
+    <p class="card-text-rpg">
+  ■ KettraWorld é um servidor RPG medieval baseado no mundo fictício de Kettra. Lar da grande Deusa
+  Amarantha e seus irmãos, que deram tudo de si para selar o imensurável poder da Deusa primogênita
+  Tainith, que iria destruir o mundo conhecido na era como Koramund. Contudo, em benefício da
+  sobrevivência deste mundo, o Deus Lydrin forjou um artefato que tornaria esse objetivo realidade.
+  Assim, Amarantha conseguiu, com o sacrifício e aprisionamento dos outros dezesseis Deuses, o poder
+  necessário para prender Tainith em um lugar no qual ela não conseguiria se soltar. Dessa forma,
+  criou uma nova era, um novo mundo sem o medo e o caos que a Deusa trazia junto ao brilho de seu
+  astro.
+ </p>
+  </div>
+  <div class="page">
+   <p class="card-text-rpg">
+  ■ Como um romântico conto, o mal se esvaiu de nossa era, Amarantha salvou todos e fez Yutha brilhar
+  por
+  toda Kettra. No entanto, isso não foi o bastante. A influência da Deusa dos Espíritos fez com que as
+  almas dos mortos que ainda não tinham partido vagassem pelo mundo e, juntos, criassem as criaturas
+  da
+  noite. Monstros que trouxeram a vingança de Tainith a Kettra.</p>
+  </div>
+  <div class="page">
+   <p class="card-text-rpg">
+  ■ Ao longo da história, o mundo cresceu e sobreviveu ao lado de Amarantha, lutando contra as
+  criaturas
+  de Tainith, com o objetivo de um dia erradicar todo esse mal do mundo e impedir as profecias que
+  caíram
+  sobre o nome do Astro. Nosso mundo sempre ensinou que não devemos pronunciar o seu nome para que não
+  atrairmos sua terrível influência. Isso era o que todos pensavam até o surgimento de um grupo vindo
+  de
+  outra dimensão, que carregava o sangue do astro caído</p>
+  </div>
+  <div class="page">
+   <p class="card-text-rpg">
+  ■ Os filhos de Amarantha oram por ajuda, seja você a constelação que os céus de Kettra precisam para
+  eliminar o poder maligno do Astro caído.
+</p>
+  </div>
+ </div>    
+<div>
+  <button id="previous" style="width: 20%; float: left;" class="page-btn"><i class="fas fa-angle-double-left"></i></button>
+  <button id="next" style="width: 20%; float: left;" class="page-btn"><i class="fas fa-angle-double-right"></i></button>
+</div>
                 </div>
               </div>
               <h2 class="article-title"><i class="fas fa-trophy"></i> Rank</h2>
@@ -173,6 +188,40 @@
 </body>
 <!--- end screen view --->
 <!--- scripts used on the website --->
+<script type="text/javascript" charset="utf-8">
+var pages = document.querySelectorAll(".page");
+var currentPage = 0; 
+var Previous = document.getElementById("previous"); 
+var Next = document.getElementById("next");
+
+ function showPage(page) {
+
+  pages[currentPage].style.display = "none";
+  pages[page].style.display = "block";
+  currentPage = page;
+
+  if (currentPage === 0) {
+    Previous.style.display = "none";
+  } else {
+    Previous.style.display = "block";
+  }
+
+  if (currentPage === pages.length - 1) {
+    Next.style.display = "none";
+  } else {
+    Next.style.display = "block";
+  }
+ }
+
+  Previous.style.display = "none";
+  Next.addEventListener("click", () => {
+    showPage(currentPage + 1);
+  });
+
+  Previous.addEventListener("click", () => {
+    showPage(currentPage - 1);
+  });    
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
   integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
