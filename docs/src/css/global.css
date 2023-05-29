@@ -166,6 +166,7 @@ label {
 }
 
 .form-control[type='text'],
+.form-control[type='password'],
 .form-control[type='email'],
 .form-control[type='select'] {
   color: #ffffffb9;

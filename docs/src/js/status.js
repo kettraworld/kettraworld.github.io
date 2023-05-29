@@ -1,4 +1,8 @@
 $(document).ready(() => {
+  
+if (Cookies.get('hash')) {
+  $('#login').html('<a class="nav-link" href="/dashboard/index.html"><i class="fas fa-user"></i> Dashboard</a>'); 
+}
 
  $.ajax({
   url: 'https://api.minetools.eu/ping/ca02.heavyhost.com.br/25005',
