@@ -8,7 +8,7 @@
   justify-content: center;
   border: 1.8px solid #8b4d13;
   background-image: url('https://cdn.discordapp.com/attachments/1077666564880486503/1103428679071174686/Antique_Vintage_Fundo_De_Papel_Envelhecido.jpg');
-  padding: 15px;
+  padding: 10px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   margin: 0 auto;
@@ -86,14 +86,14 @@
       flex-direction: row;
       justify-content: space-between;
       width: 100%;
-      margin-bottom: 40px;
+      margin-bottom: 10px;
     }
     
     .platina-card,
     .prata-card,
     .ouro-card {
       background-color: #f5deb3;
-      padding: 12px;
+      padding: 8px;
       border: 1.8px solid #8b4d13;
       border-radius: 40px;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -157,7 +157,7 @@
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       width: 30%;
       text-align: center;
     }
