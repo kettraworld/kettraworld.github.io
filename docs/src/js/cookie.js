@@ -11,6 +11,7 @@ buttons.forEach(button => {
 exit.forEach(button => {
 	button.addEventListener('click', () => {
 	  Cookies.remove('hash');
+	  window.location = '/dashboard/auth2.html';
 	});
 });
 
