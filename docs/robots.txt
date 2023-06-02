@@ -26,67 +26,67 @@
 #
 
 User-agent: *
-Disallow: /purchase?*
+Disallow: /payment
 Disallow: /dashboard
 Disallow: /dashboard/auth2
 
 User-agent: Googlebot
-Disallow: /purchase?*
+Disallow: /payment
 Disallow: /dashboard
 Disallow: /dashboard/auth2
 
 User-agent: Twitterbot
-Disallow: /purchase?*
+Disallow: /payment
 Disallow: /dashboard
 Disallow: /dashboard/auth2
 
 User-agent: YandexBot
-Disallow: /purchase?*
+Disallow: /payment
 Disallow: /dashboard
 Disallow: /dashboard/auth2
 
 User-agent: bingbot
-Disallow: /purchase?*
+Disallow: /payment
 Disallow: /dashboard
 Disallow: /dashboard/auth2
 
 User-agent: facebookexternalhit
-Disallow: /purchase?*
+Disallow: /payment
 Disallow: /dashboard
 Disallow: /dashboard/auth2
 
 User-Agent: Slurp
-Disallow: /purchase?*
+Disallow: /payment
 Disallow: /dashboard
 Disallow: /dashboard/auth2
 
 User-Agent: DuckDuckBot
-Disallow: /purchase?*
+Disallow: /payment
 Disallow: /dashboard
 Disallow: /dashboard/auth2
 
 User-agent: baidu
-Disallow: /purchase?*
+Disallow: /payment
 Disallow: /dashboard
 Disallow: /dashboard/auth2
 
 User-agent: Screaming Frog SEO Spider
-Disallow: /purchase?*
+Disallow: /payment
 Disallow: /dashboard
 Disallow: /dashboard/auth2
 
 User-agent: TelegramBot
-Disallow: /purchase?*
+Disallow: /payment
 Disallow: /dashboard
 Disallow: /dashboard/auth2
 
 User-agent: Discordbot
-Disallow: /purchase?*
+Disallow: /payment
 Disallow: /dashboard
 Disallow: /dashboard/auth2
 
 User-agent: Applebot
-Disallow: /purchase?*
+Disallow: /payment
 Disallow: /dashboard
 Disallow: /dashboard/auth2
 
