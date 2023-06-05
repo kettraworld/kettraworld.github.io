@@ -418,3 +418,33 @@ label {
 .page:first-child { 
   display: block; 
 } 
+
+.discount {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  overflow: hidden;
+  animation: anim 1.2s forwards;
+}
+
+.discount span {
+  width: 250px;
+  height: 30px;
+  position: absolute;
+  transform: rotate(-45deg);
+  right: -20px;
+  top: 20px;
+  display: grid;
+  place-items: center;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+}
+
+@keyframes anim {
+  100% {
+    width: 140px;
+    height: 140px;
+  }
+}

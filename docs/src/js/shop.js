@@ -5,6 +5,7 @@ $(document).ready(() => {
    data.forEach(product => {
       const card = `
       <section class="card shop">
+      <div class="discount">${product.data.tag}"</div>
       <div class="icon">
       <img src="${product.data.image}" class="card-img-top" alt="${product.data.name}" />
       </div>
