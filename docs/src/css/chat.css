@@ -1,0 +1,147 @@
+.chat-container {
+  max-width: 100%;
+  margin: 20px auto;
+  background-color: #2f3136;
+  border-radius: 12px;
+  color: #ffffff;
+}
+
+.messages-container {
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.message {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.message author {
+  font-size: 10px;
+  margin-bottom: 6px;
+  color: #fff;
+}
+
+.message p {
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 18px;
+  max-width: 100%;
+}
+
+.message.right {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.message.right p {
+  background-color: #0099ff;
+  color: #ffffff;
+}
+
+.message.left {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.message.left p {
+  background-color: #f2f2f2;
+  color: #000000;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #2f3136;
+}
+
+.input-container input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #36393f;
+  color: #ffffff;
+}
+
+.input-container button {
+  margin-left: 10px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: #b85870;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.input-container button:hover {
+  background-color: #b05068;
+}
+
+.input-container button:focus, .input-container input[type="text"] {
+  outline: none;
+}
+
+@media only screen and (max-width: 500px) {
+  .chat-container {
+    max-width: 100%;
+    margin: 10px;
+  }
+}
+
+ul.message-list {
+  list-style: none;
+  overflow-y: scroll;
+  height: 175px; 
+  padding: 0;
+}
+
+ul.message-list li {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+ul.message-list .author {
+  font-size: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  color: #fff;
+}
+
+ul.message-list p {
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 18px;
+  max-width: 80%;
+}
+
+ul.message-list .right {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+ul.message-list .right p {
+  background-color: #0099ff;
+  color: #ffffff;
+}
+
+ul.message-list .left {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+ul.message-list .left p {
+  background-color: #f2f2f2;
+  color: #000000;
+}
+
+.typing {
+  bottom: 3px;
+  color: #fff;
+  font-size: 10px;
+  text-align: center;
+}
