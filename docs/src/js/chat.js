@@ -1,4 +1,4 @@
-const socket = io("http://129.148.43.196:8888");
+const socket = io("http://129.148.43.196:8080");
 const input = document.getElementById('input');
 const send = document.getElementById('send');
 const audio = new Audio("https://cdn.discordapp.com/attachments/1077666564880486503/1121196909302915083/notify.mp3");
