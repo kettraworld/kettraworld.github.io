@@ -67,7 +67,7 @@ input.addEventListener('input', () => {
 });
 
 socket.on('typing', (typing) => {
-  if (typing.length === 1 && typing[0].nick != nick) {
+  if (typing.length === 1 /*&& typing[0].nick != nick*/) {
     $('#typing').html(`💡 ${typing[0].nick} está digitando...`);
   } else if (typing.length > 1) {
     $('#typing').html('💡 Várias pessoas estão digitando...');
