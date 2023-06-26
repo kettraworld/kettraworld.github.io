@@ -67,9 +67,11 @@ input.addEventListener('input', () => {
 });
 
 socket.on('typing', (typing) => {
-  if (typing.length === 1 /*&& typing[0].nick != nick*/) {
+  if (typing.length === 1 && typing[0].nick != nick) {
     $('#typing').html(`💡 ${typing[0].nick} está digitando...`);
-  } else if (typing.length > 1) {
+  } else if (typing.length === 2 && typing[0].nick != nick) {
+    $('#typing').html(`💡 ${typing[0].nick} e ${typing[1].nick} estão digitando...`);
+  } else if (typing.length > 2 && typing[0].nick != nick) {
     $('#typing').html('💡 Várias pessoas estão digitando...');
   } else {
     $('#typing').html(' ');
