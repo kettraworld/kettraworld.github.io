@@ -1,6 +1,4 @@
-const socket = io("wss://socket.kettraworld.shop", {
-  withCredentials: true
-});
+const socket = io("wss://socket.kettraworld.shop");
 const input = document.getElementById('input');
 const send = document.getElementById('send');
 const audio = new Audio("https://cdn.discordapp.com/attachments/1077666564880486503/1121196909302915083/notify.mp3");
