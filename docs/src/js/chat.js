@@ -1,7 +1,8 @@
 const socket = io("wss://socket.kettraworld.shop");
-const input = document.getElementById('input');
-const send = document.getElementById('send');
-const audio = new Audio("https://cdn.discordapp.com/attachments/1077666564880486503/1121196909302915083/notify.mp3");
+const audio = new Audio('../src/music/plin.mp3');
+const send = document.querySelectorAll("#send");
+const notify = document.querySelectorAll("#notify");
+const input = $('input');
 
 const piii = new Piii({
   filters: [
@@ -12,14 +13,18 @@ const piii = new Piii({
   }
 });
 
-send.addEventListener('click', () => {
-  if (input.value) {
+send.forEach(button => {
+ button.addEventListener('click', (click) => {
+  if (input.val()) {
     socket.emit('send-chat', {
-      name: nick, message: piii.filter(input.value), time: new Date()
-    });
-    input.value = '';
+      name: nick,
+      message: piii.filter(input.val()), 
+      time: new Date()
+   });
+    input.val(" ");
     socket.emit('stop-typing');
-  }
+    }
+  });
 });
 
 socket.on('chat', (chat) => {
@@ -35,47 +40,58 @@ socket.on('chat', (chat) => {
       <p>${chat.message}</p></li>`);
   }
 
+  Cookies.set('view', chat._id);
   $('.message-list').scrollTop($('.message-list')[0].scrollHeight);
 
 });
 
 socket.on('previous-chat', (message) => {
    message.forEach((chat) => {
-    if (chat.name == nick) {
+    if (chat.name != nick) {
       $("#chat").append(`<li id="${chat._id}" class="message right">
         <author><b>${chat.name}</b> - ${moment(chat.time).locale('pt-br').calendar()}</author>
         <p>${chat.message}</p>
       </li>`);
     } else {
-      $("#chat").append(`<li id="${chat._id}" class="message left">
-        <author><b>${chat.name}</b> - ${moment(chat.time).locale('pt-br').calendar()}</author>
-        <p>${chat.message}</p></li>`);
+   
+  if (Cookies.get('view') && Cookies.get('view') == chat._id.toString()) return $('#notify').html('<div class="notify"><i class="fas fa-bell"></i> Novas mensagens disponíveis</div>');
+    
+  $("#chat").append(`<li id="${chat._id}" class="message left"><author><b>${chat.name}</b> - ${moment(chat.time).locale('pt-br').calendar()}</author><p>${chat.message}</p></li>`);
     }
   });
-
-  $('.message-list').scrollTop($('.message-list')[0].scrollHeight);
+ 
+     $('.message-list').scrollTop($('.message-list')[0].scrollHeight);
 });
 
-input.addEventListener('input', () => {
-  if (input.value) {
+input.on('input', () => {
+  if (input.val()) {
     socket.emit('typing', nick);
   } else {
-    socket.emit('stop-typing');
+   socket.emit('stop-typing');
   }
 });
 
 socket.on('typing', (typing) => {
-  if (typing.length === 1 && typing[0].nick != nick) {
-    $('#typing').html(`💡 ${typing[0].nick} está digitando...`);
-  } else if (typing.length === 2 && typing[0].nick != nick) {
-    $('#typing').html(`💡 ${typing[0].nick} e ${typing[1].nick} estão digitando...`);
-  } else if (typing.length > 2 && typing[0].nick != nick) {
-    $('#typing').html('💡 Várias pessoas estão digitando...');
-  } else {
-    $('#typing').html(' ');
-  }
+ if (typing.length === 1/* */) {
+    $('#notify').html(`<div class="notify">💡 ${typing[0].nick} está digitando...</div>`);
+ } else if (typing.length === 2/* */) {
+   $('#notify').html(`<div class="notify">💡 ${typing[0].nick} e ${typing[1].nick} estão digitando...</div>`);
+ } else if (typing.length > 2/* */) {
+   $('#notify').html('<div class="notify">💡 Várias pessoas estão digitando...</div>');
+ } else {
+   $('#notify').html('');
+ }
 });
 
 socket.on('stop-typing', () => {
-  $('#typing').html('');
+  $('#notify').html('');
+});
+
+
+notify.forEach(button => {
+ button.addEventListener('click', (click) => {
+ 
+  $('.message-list').scrollTop($(`li#${Cookies.get('view')}`).position().top - $('.message-list').offset().top);
+ });
+ 
 });

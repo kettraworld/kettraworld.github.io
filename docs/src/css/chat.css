@@ -146,3 +146,25 @@ ul.message-list .left p {
   font-size: 10px;
   text-align: center;
 }
+
+.notify-container {
+  position: relative;
+  margin: 0 auto;
+}
+
+.notify {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  background: #b05068;
+  border-radius: 30px;
+  color: #fff;
+  padding: 5px;
+  text-align: center;
+  font-size: 10px;
+  white-space: nowrap;
+  font-weight: bold;
+  margin: -10px auto; 
+}
