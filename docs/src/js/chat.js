@@ -47,7 +47,7 @@ socket.on('chat', (chat) => {
 
 socket.on('previous-chat', (message) => {
    message.forEach((chat) => {
-    if (chat.name != nick) {
+    if (chat.name == nick) {
       $("#chat").append(`<li id="${chat._id}" class="message right">
         <author><b>${chat.name}</b> - ${moment(chat.time).locale('pt-br').calendar()}</author>
         <p>${chat.message}</p>
