@@ -13,6 +13,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
     integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async
+    defer></script>
   <script src="../src/js/login.js" type="text/javascript" charset="utf-8"></script>
   <link rel="apple-touch-icon" href="../src/img/favicon.png" />
   <link rel="shortcut icon" href="../src/img/favicon.ico" type="image/x-icon" />
@@ -41,7 +43,6 @@
   <div class="particle particle-4"></div>
   <!--- end particles --->
   <!--- Home of navbar--->
-  <div class="container">
     <nav class="navbar navbar-expand-lg">
       <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
         data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
@@ -82,7 +83,6 @@
         </ul>
       </div>
     </nav>
-  </div>
   <!--- end of navbar --->
   <!--- start of card --->
   <main class="section">
@@ -107,6 +107,9 @@
                     <input type="password" class="form-control" id="password" placeholder="Senha..." name="password"
                       minlength="4" maxlength="12" required />
                   </div>
+<div class="form-group">
+ <div class="cf-turnstile" data-sitekey="0x4AAAAAAAGvKQ-yeGsJeQrG"
+ data-callback="javascriptCallback"></div></div>
                   <button type="submit" style="padding: 6px" class="valor">
                     <i class="fas fa-sign-in-alt"></i> Entrar
                   </button>

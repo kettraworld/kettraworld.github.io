@@ -1,72 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
 
 :root {
-	--layout: #b85870;
-	--layout-dark: #b05068;
+    --layout: #b85870;
+    --layout-dark: #b05068;
 }
 
-/* beginning of the css responsible for styling the navbar */ 
+/* beginning of the css responsible for styling the navbar */
 
 .navbar {
-	max-width: 1200px;
-	margin: 0 auto;
-	border-bottom-left-radius: 1.3pc;
-	border-bottom-right-radius: 1.3pc;
-	background: linear-gradient(to bottom, #b85870, #b85867);
+    max-width: 100%;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: -5px;
+    border-bottom-left-radius: 1.3pc;
+    border-bottom-right-radius: 1.3pc;
+    background: linear-gradient(to bottom, #b85870, #b85867);
+}
+
+.collapse,
+.navbar-collapse {
+    display: flex;
+    margin: 10px;
+    padding: 12px;
+    border-radius: 30px;
+    background-color: var(--layout-dark);
+}
+
+.nav-item a, z {
+    font-family: 'MedievalSharp', cursive;
+    text-decoration: none;
+    color: #fff;
 }
 
 .custom-toggler {
-	border-radius: 8px;
-	margin-bottom: 8px;
-	border: 1.4px solid var(--layout-dark);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    border: 1.4px solid var(--layout-dark);
 }
 
 .custom-toggler:focus {
-	outline: none;
+    outline: none;
 }
 
 .custom-toggler:hover {
-	opacity: 0.6;
-	cursor: pointer;
-	box-shadow: 1.3px 1.3px 3.9px #000000;
+    opacity: 0.6;
+    cursor: pointer;
+    box-shadow: 1.3px 1.3px 3.9px #000000;
 }
 
 .navbar-toggler-icon {
-	background-image: url('https://cdn.discordapp.com/attachments/1078405618139922532/1093536031929798686/redbed.png');
-	background-size: cover;
+    background-image: url('https://cdn.discordapp.com/attachments/1078405618139922532/1093536031929798686/redbed.png');
+    background-size: cover;
 }
 
-.navbar-collapse,
 .dropdown-menu {
-	padding: 6px;
-	color: #fff;
-	border-radius: 10px;
-	background-color: var(--layout-dark);
+    padding: 6px;
+    color: #fff;
+    border-radius: 10px;
+    background-color: var(--layout-dark);
 }
 
 .nav-link,
 .dropdown-item,
 .dropdown-item:focus {
-	color: #fff;
+    color: #fff;
 }
 
 .nav-link:hover,
 .dropdown-item:hover {
-	color: #000000a3;
-	background-color: var(--layout-dark);
+    color: #000000a3;
+    background-color: var(--layout-dark);
 }
 
 .ipcopy {
-	padding: 7px;
-	color: #fff;
-	cursor: pointer;
-	border-radius: 25px;
-	background-color: var(--layout-dark);
+    padding: 8px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 30px;
+    background-color: var(--layout-dark);
 }
 
 .ipcopy span {
-	font-size: 13px;
-	font-family: 'Chiller', fantasy;
-	color: #fff;
+    font-size: 12px;
+    font-family: 'MedievalSharp', cursive;
+    color: #fff;
 }
 
 /* End of styling used for navbar */
