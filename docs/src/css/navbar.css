@@ -20,8 +20,8 @@
 .collapse,
 .navbar-collapse {
     display: flex;
-    margin: 10px;
-    padding: 12px;
+    margin: 5px;
+    padding: 10px;
     border-radius: 30px;
     background-color: var(--layout-dark);
 }
