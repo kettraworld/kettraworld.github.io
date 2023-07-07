@@ -49,7 +49,7 @@
 }
 
 .navbar-toggler-icon {
-    background-image: url('https://cdn.discordapp.com/attachments/1078405618139922532/1093536031929798686/redbed.png');
+    background-image: url('../img/navbar.png');
     background-size: cover;
 }
 

@@ -6,7 +6,10 @@
   align-items: center;
   justify-content: center;
   border: 1.8px solid #8b4d13;
-  background-image: url('https://cdn.discordapp.com/attachments/1077666564880486503/1103428679071174686/Antique_Vintage_Fundo_De_Papel_Envelhecido.jpg');
+  background-image: url('../img/player_card.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
