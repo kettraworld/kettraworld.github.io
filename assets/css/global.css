@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+
+:root {
+  --layout: #b85870;
+  --layout-dark: #b05068;
+}
+
+.enchantment {
+    background-color: black;
+    scroll-behavior: smooth;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    overflow-y: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar {
+    max-width: 100%;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: -5px;
+    border-bottom-left-radius: 1.3pc;
+    border-bottom-right-radius: 1.3pc;
+    background: linear-gradient(to bottom, var(--layout), var(--layout-dark));
+}
+
+.navbar-collapse,
+.collapse {
+    display: flex;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: var(--layout-dark);
+}
+
+.nav-item a {
+    font-family: 'MedievalSharp', cursive;
+    text-decoration: none;
+    color: #fff;
+}
+
+.custom-toggler {
+    border-radius: 20px !important;
+    margin-bottom: 5px;
+    border: 1.5px solid var(--layout-dark) !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url('../img/navbar.png') !important;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.custom-toggler:focus {
+    outline: none;
+}
+
+.custom-toggler:hover {
+    opacity: 0.6;
+    cursor: pointer;
+    box-shadow: 1.3px 1.3px 3.9px #000000;
+}
+
+.nav-link:hover {
+    color: #000000a3;
+    background-color: var(--layout-dark);
+}
+
+.address {
+    padding: 8px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 30px;
+    background-color: var(--layout-dark);
+}
+
+.address span {
+    font-size: 12px;
+    font-family: 'MedievalSharp', cursive;
+    color: #fff;
+}
+
+.container-fluid {
+  background-color: transparent;
+  padding: 10px;
+}
+
+article {
+  background-color: #222222;
+  border-radius: 20px;
+  opacity: 0.9;
+  margin: -2px 0 8px 0;
+  padding: 10px;
+}
+
+.article-title {
+  background-color: var(--layout);
+  font-family: 'Chiller', fantasy;
+  box-shadow: 0 0 4px #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 20px;
+  padding: 8px 8px 8px 22px;
+  margin: 10px;
+}
+
+.card-rpg {
+  position: relative;
+  background-color: #f5deb3;
+  border-radius: 10px;
+  border: 1.9px solid #8b4d13;
+  padding: 20px;
+  box-shadow: 3px 3px 6px #fff;
+  text-align: justify;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.card-text-rpg {
+  color: black;
+  font-family: 'UnifrakturMaguntia', serif;
+}
+
+.card-img-rpg {
+  height: 180px;
+  margin: 0 0 15px 0 !important;
+  border-radius: 20px !important;
+  border: 2.1px solid #8b4d13;
+  box-shadow: 0px 3.2px 4px #8b4d13;
+}
+
+.card-rpg button {
+  width: 33.33%;
+  background-color: transparent;
+  padding: 4px;
+  border-radius: 43px;
+}
+
+.card-rpg button:focus {
+  outline: none;
+}
+
+.card-rpg button:active {
+  transform: scale(0.98);
+}
+
+.page { 
+  display: none; 
+} 
+
+.page:first-child { 
+  display: block; 
+} 
+
+.loading {
+  animation: loading 2s linear infinite;
+}
+
+main.cards {
+  padding: 20px;
+}
+
+main.cards section.card {
+ display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #484848c8;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  max-height: 460px;
+  margin: 10px
+}
+
+main.cards section.card .icon {
+  width: 72px;
+  height: 72px;
+}
+
+main.cards section.card img {
+  width: 100%;
+}
+
+main.cards section.card h3 {
+  color: #fff;
+  font-size: 19px;
+  margin: 10px;
+  text-align: center;
+  font-family: 'medieval';
+}
+
+main.cards section.card span {
+  font-weight: 300;
+  max-width: 240px;
+  font-family: 'medieval';
+  color: #fff;
+  font-size: 80%;
+  margin-bottom: 16px;
+}
+
+main.cards section.card button {
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  border-radius: 32px;
+  border: 0;
+  cursor: pointer;
+  font-size: 80%;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+main.cards section.card button.shop {
+  background: linear-gradient(to right, #b85870, #b05068);
+}
+
+main.cards section.card.shop {
+  box-shadow: 20px 20px 50px -30px #afd6ff;
+}
+
+.valor {
+  color: #fff !important;
+  text-align: center;
+  font-size: 16px;
+  padding: 8px;
+  font-family: arial;
+  background: linear-gradient(to bottom, #b85870, #b85867);
+  border-radius: 10px;
+  border: 1px solid #fff !important;
+  text-shadow: 0px 1px 2px #000000;
+}
+
+.valor:focus {
+  outline: none;
+}
+
+.valor:hover {
+  opacity: 0.41;
+  text-shadow: 2px 1px 0px #000000;
+  box-shadow: 5px 2px 3px #000000;
+}
+
+.box {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 13px;
+  padding-bottom: 10px;
+  box-shadow: 1px 1px 4px #ccc;
+}
+
+label {
+  font-family: American Typewriter, serif;
+  font-size: 14px;
+  color: #fff;
+}
+
+.form-control {
+  background-color: #202020 !important;
+  border: 2.3px solid #b05068 !important;
+  color: #fff !important;
+}
+
+.form-control::placeholder {
+  color: #bababa8c;
+}
+
+.form-control[type='text'],
+.form-control[type='password'],
+.form-control[type='email'],
+.form-control[type='select'] {
+  color: #ffffffb9;
+  border: 2.3px solid #b05068;
+  background-color: transparent;
+}
+
+.footer {
+  background-color: var(--layout);
+  padding: 1rem;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.footer a {
+  color: #fff;
+  font-family: 'MedievalSharp', cursive;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.footer a:active {
+  color: black;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 1023px) {
+    
+}
+
+@media screen and (max-width: 1023px) {
+    
+}
+
+@media screen and (max-width: 1023px) {
+    
+}
+
