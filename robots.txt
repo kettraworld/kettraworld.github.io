@@ -1,0 +1,69 @@
+# Don't try to knock us down because we're going to fall!
+#
+#              _____
+#             |     |
+#             | | | |
+#             |_____|
+#       ____ ___|_|___ ____
+#      ()___)         ()___)
+#      // /|           |\ \\
+#     // / |           | \ \\
+#    (___) |___________| (___)
+#    (___)   (_______)   (___)
+#    (___)     (___)     (___)
+#    (___)      |_|      (___)
+#    (___)  ___/___\___   | |
+#     | |  |           |  | |
+#     | |  |___________| /___\ 
+#    /___\  |||     ||| //   \\
+#   //   \\ |||     ||| \\   //
+#   \\   // |||     |||  \\ //
+#    \\ // ()__)   (__()
+#          ///       \\\ 
+#         ///         \\\ 
+#       _///___     ___\\\_
+#      |_______|   |_______|
+#
+
+User-agent: *
+Disallow: /dashboard
+
+User-agent: Googlebot
+Disallow: /dashboard
+
+User-agent: Twitterbot
+Disallow: /dashboard
+
+User-agent: YandexBot
+Disallow: /dashboard
+
+User-agent: bingbot
+Disallow: /dashboard
+
+User-agent: facebookexternalhit
+Disallow: /dashboard
+
+User-Agent: Slurp
+Disallow: /dashboard
+
+User-Agent: DuckDuckBot
+Disallow: /dashboard
+
+User-agent: baidu
+Disallow: /dashboard
+
+User-agent: Screaming Frog SEO Spider
+Disallow: /dashboard
+
+User-agent: TelegramBot
+Disallow: /dashboard
+
+User-agent: Discordbot
+Disallow: /dashboard
+
+User-agent: Applebot
+Disallow: /dashboard
+
+Sitemap: https://www.kettraworld.shop/sitemap.xml
+
+# In case of any problems, please contact us via email: kettraworld@gmail.com
