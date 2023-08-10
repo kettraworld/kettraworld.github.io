@@ -21,6 +21,7 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer">
   </script>
+ <script src="assets/js/book.js"></script>
  <script src="assets/js/status.js"></script>
 </head>
 
@@ -50,9 +51,6 @@
           <a class="nav-link" href="https://discord.gg/NDzFeDp8YE" target="_blank"><i class="fab fa-discord"></i>
             Discord</a>
         </li>
-     <!--- <li id="login" class="nav-item">
-          <a class="nav-link" href="/dashboard/auth2.html"><i class="fas fa-sign-in-alt"></i> Login</a>
-        </li> --->
       </ul>
     </div>
   </nav>
@@ -129,61 +127,6 @@
     </footer>
   </div>
 </body>
-<script type="text/javascript" charset="utf-8">
-  $(document).ready(() => {
-  var pages = $(".page");
-  var currentPage = 0; 
-  var Previous = $("#previous"); 
-  var Next = $("#next");
-
-  function showPage(page) {
-    pages.eq(currentPage).hide();
-    pages.eq(page).show();
-    currentPage = page;
-
-    if (currentPage === 0) {
-      Previous.hide();
-    } else {
-      Previous.show();
-    }
-
-    if (currentPage === pages.length - 1) {
-      Next.hide();
-    } else {
-      Next.show();
-    }
-  }
-
-  Previous.hide();
-  Next.on("click", () => {
-    showPage(currentPage + 1);
-  });
-
-  Previous.on("click", () => {
-    showPage(currentPage - 1);
-  });
-});
-</script>
-<script type="text/javascript" charset="utf-8">
-  $(document).ready(() => {
- $.getJSON('https://minecraft-mp.com/api/?object=servers&element=voters&key=qGf28ODBQJWj5fivrvDYDH7GdoFS5BxSMSd&month=current&format=json&limit=3', (data) => {
-  const voters = data.voters;
-  let html = '';
-  for (let i = 0; i < voters.length; i++) {
-    const name = voters[i].nickname;
-    const votes = voters[i].votes;
-    html += `<div class="rank-card">
-    <img src="https://cravatar.eu/head/${name}/128.png" alt="${name}" height="auto" width="auto">
-     <h2 class="rank-card__title">${name}</h2>
-     <p>Contendo <b>${votes}</b> votos!</p>
-     </div>`;
-    $('#rank').html(html);
-  }
-}).catch(error => {
-	$('#rank').html('<div style="width: 100%;" class="rank-card"><p>Ops! Não foi possível verificar a lista dos jogadores que votaram no servidor.</p></div>');
-  });
-});
-</script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
   crossorigin="anonymous">
 </script>

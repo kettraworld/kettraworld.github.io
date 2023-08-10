@@ -19,5 +19,4 @@ jobs:
           USER: ${{ secrets.USER }}
           KEY: ${{ secrets.KEY }}
           FOLDER: 'var/www/website'
-          RUN: "systemctl restart nginx"
-          
+     
