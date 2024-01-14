@@ -3,14 +3,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: url('../img/background/header.jpeg');
+  background-image: url('../../img/background/header.jpeg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;  
   text-align: center;
   border-bottom: 1px solid #ccc;
   padding: 10px;
-  color: var(--text-color-primary);
+  color: var(--text-color);
 }
 
 .header-body h1 {
@@ -27,7 +27,9 @@
   text-shadow: 0px 3px 0px #555;
 }
 
-@media screen and (min-width: 320px) and (max-width: 780px) {
+
+ /* mobile devices */
+@media screen and (min-width: 320px) {
   
   .header-body {
     height: auto;
@@ -48,15 +50,17 @@
 
 }
 
-@media screen and (min-width: 780px) {
+ 
+ /* tablets e notebook com tela pequena  */
+@media screen and (min-width: 720px) {
   
   .header-body {
-    height: 15%;
-    padding: 0;
+    height: auto;
+    padding: 20px;
   }
   
   .header-body h1 {
-    font-size: 8rem;
+    font-size: 50px;
     font-weight: bold;
     text-shadow: 0px 8px 0px #555;
   }
@@ -64,7 +68,9 @@
   .header-body span {
     font-weight: 300;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 12px;
     text-shadow: 0.9px 3px 0.9px 0.9px #555;
   }
 }
+
+
