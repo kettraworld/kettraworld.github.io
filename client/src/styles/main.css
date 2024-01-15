@@ -2,10 +2,11 @@
 @import url("components/news.css");
 @import url("components/header.css");
 @import url("components/navbar.css");
+@import url("components/article.css");
 
-@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
 
-@import 'https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap';
+@import url("https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap");
 
 :root {
   --layout: #8a2be2;
@@ -13,14 +14,30 @@
   --text-color: #fff;
 }
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html, body {
   width: 100%;
   height: 100%;
-  margin: 0;
-  padding: 0;
+  scroll-behavior: smooth;
   font-family: 'MedievalSharp', cursive;
   background-color: black;
-  box-sizing: border-box;
+}
+
+.section {
+  padding: 5px;
+}
+
+.row {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px
 }
 
 /*

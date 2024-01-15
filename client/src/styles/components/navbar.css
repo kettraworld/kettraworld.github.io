@@ -9,7 +9,7 @@ nav {
   z-index: 999;
   align-items: center;
   background: linear-gradient(to bottom, var(--layout), var(--layout-dark));
-  box-shadow: 0 0 8px 0 rgba(0,0,0,0.1), 0 0 36px 0 rgba(0,0,0,0.1);
+  border-bottom: 1px solid #ccc;
 }
 
 nav input[type=checkbox] {

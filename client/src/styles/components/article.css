@@ -1,0 +1,17 @@
+article {
+  background-color: #222222;
+  border-radius: 20px;
+  padding: 10px;
+  opacity: 0.9;
+}
+
+article .title {
+  background: linear-gradient(to bottom, var(--layout), var(--layout-dark));
+  text-align: center;
+  font-weight: bold;
+  border-radius: 8px;
+  color: #fff;
+  padding: 10px;
+  font-size: 30px;
+  margin: 10px;
+}

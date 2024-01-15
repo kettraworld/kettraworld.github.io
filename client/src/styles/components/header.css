@@ -27,8 +27,7 @@
   text-shadow: 0px 3px 0px #555;
 }
 
-
- /* mobile devices */
+ /* smartphone */
 @media screen and (min-width: 320px) {
   
   .header-body {
@@ -44,14 +43,13 @@
   .header-body span {
     font-weight: 300;
     text-align: center;
-    font-size: 8px;
+    font-size: 10px;
     text-shadow: 0.9px 3px 0.9px 0.9px #555;
   }
 
 }
 
- 
- /* tablets e notebook com tela pequena  */
+ /* tablet */
 @media screen and (min-width: 720px) {
   
   .header-body {
@@ -73,4 +71,7 @@
   }
 }
 
-
+/* computer */
+@media screen and (min-width: 1024px) {
+  
+}
