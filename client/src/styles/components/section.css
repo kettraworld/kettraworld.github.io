@@ -1,11 +1,13 @@
-article {
+
+section {
   background-color: #222222;
   border-radius: 20px;
+  margin: 10px;
   padding: 10px;
   opacity: 0.9;
 }
 
-article .title {
+section .title {
   background: linear-gradient(to bottom, var(--layout), var(--layout-dark));
   text-align: center;
   font-weight: bold;
