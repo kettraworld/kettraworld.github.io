@@ -3,6 +3,7 @@
 @import url("components/header.css");
 @import url("components/navbar.css");
 @import url("components/article.css");
+@import url("components/footer.css");
 
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
 
@@ -32,6 +33,7 @@ html, body {
 
 .section {
   padding: 5px;
+  margin: 5px;
 }
 
 .row {
