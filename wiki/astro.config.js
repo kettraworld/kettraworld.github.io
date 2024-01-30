@@ -2,8 +2,6 @@ import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 
 export default defineConfig({
-  site: 'http://0.0.0.0:8080',
-  server: { host: '0.0.0.0', port: 8080 },
   integrations: [
    starlight({
     title: "Kettra World",
