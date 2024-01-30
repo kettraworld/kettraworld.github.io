@@ -1,0 +1,85 @@
+
+<style>
+
+.header-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url(background/header.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;  
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  color: #fff;
+}
+
+.header-body h1 {
+  margin: 5px;
+  font-size: 55px;
+  font-weight: bold;
+  text-shadow: 0px 3px 0px #555;
+}
+
+.header-body span {
+  font-size: 10px;
+  font-weight: 300;
+  text-align: center;
+  text-shadow: 0px 3px 0px #555;
+}
+
+ /* smartphone */
+@media screen and (min-width: 320px) {
+  
+  .header-body {
+    height: auto;
+    padding: 10px;
+  }
+
+  .header-body h1 {
+    font-size: 50px;
+    margin: 5px;
+  }
+
+  .header-body span {
+    font-weight: 300;
+    text-align: center;
+    font-size: 10px;
+    text-shadow: 0.9px 3px 0.9px 0.9px #555;
+  }
+
+}
+
+ /* tablet */
+@media screen and (min-width: 720px) {
+  
+  .header-body {
+    height: auto;
+    padding: 20px;
+  }
+  
+  .header-body h1 {
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 0px 8px 0px #555;
+  }
+  
+  .header-body span {
+    font-weight: 300;
+    text-align: center;
+    font-size: 12px;
+    text-shadow: 0.9px 3px 0.9px 0.9px #555;
+  }
+}
+
+/* computer */
+@media screen and (min-width: 1024px) {
+  
+}
+</style>
+
+<header class="header-body">
+  <h1>Kettra World</h1>
+  <span>Lar da grande Deusa Amarantha e seus irmãos, que deram tudo de si para selar o imensurável poder da Deusa primogênita Tainith, que iria destruir o mundo conhecido na era como Koramund</span>
+</header>

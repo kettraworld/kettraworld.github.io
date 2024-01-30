@@ -1,0 +1,15 @@
+---
+import config from '@/default';
+import Layout from '@/layout/default.astro';
+import Header from '@/components/header.astro';
+import Navbar from '@/components/navbar.astro';
+import Footer from '@/components/footer.astro';
+---
+
+<Layout title={config.SITE.title}
+ description={config.SITE.description} 
+ url={config.SITE.url}>
+  <Header />
+  <Navbar />
+  <Footer />
+</Layout>
