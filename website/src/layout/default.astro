@@ -26,7 +26,8 @@ const { title, description, url } = Astro.props;
   
   <meta property="og:thumbnail" content="src/background/thumbnail.jpeg" />
   
-  <link rel="canonical" href={url} />
+  <meta name="generator" content={Astro.generator} />
+  <link rel="canonical" href={Astro.url} />
   
   <link rel="apple-touch-icon" href="favicon.ico" type="image/x-icon" />
   

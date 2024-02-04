@@ -1,14 +1,17 @@
 ---
-import config from '@/default';
-import Layout from '@/layout/default.astro';
-import Header from '@/components/header.astro';
-import Navbar from '@/components/navbar.astro';
-import Footer from '@/components/footer.astro';
+import config from '@default';
+import Layout from '@layout/default.astro';
+import News from '@components/news.svelte';
+import Header from '@components/header.svelte';
+import Navbar from '@components/navbar.astro';
+import Footer from '@components/footer.svelte';
+
+console.log(Astro.cookies.get('hash'));
 ---
 
-<Layout title={config.SITE.title}
- description={config.SITE.description} 
- url={config.SITE.url}>
+<Layout title={config.SITE.title} 
+ description={config.SITE.description}>
+  <News />
   <Header />
   <Navbar />
   <Footer />

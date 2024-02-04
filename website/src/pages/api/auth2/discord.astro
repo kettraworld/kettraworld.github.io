@@ -1,0 +1,14 @@
+---
+import { query } from "@script/url";
+import { auth2_discord } from "@script/discord";
+const code = query(Astro.request.url, 'code');
+const { access_token, token_type, expires_in, refresh_token } = await auth2_discord(code);
+
+if (!access_token) return Astro.redirect('/');
+
+
+Astro.cookies.set('hash', { access_token, token_type, expires_in, refresh_token });
+
+console.log(Astro.cookies.get('hash').json());
+return Astro.redirect('/');
+---

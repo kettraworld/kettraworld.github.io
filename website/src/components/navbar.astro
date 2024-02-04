@@ -1,13 +1,14 @@
-
+---
+import config from '@default';
+---
 <style>
-
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,500,500i,700,900");
 
 @import url("https://cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css");
 
 nav {
   display: flex;
   padding: 10px;
+  height: 50px;
   justify-content: space-between;
   z-index: 999;
   align-items: center;
@@ -103,14 +104,13 @@ nav .nav-menu h5 {
   font-size: 0.85em;
   margin: 0;
   text-transform: uppercase;
-  padding: 32px 24px 14px 24px;
+  padding: 10px 24px 14px 24px;
 }
 
 nav .nav-menu h5:after {
   content: "";
   display: block;
   width: 3em;
-  margin-top: 5px;
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
@@ -149,15 +149,20 @@ nav .nav-menu.right a:hover {
 </style>
 
  <nav>
-   <input type="checkbox" id="menu-right">
-   <label for="menu-right" class="menu-bt right"></label>
-   <div class="nav-menu right">
-    <div class="menu-scroll">
+  <input type="checkbox" id="menu-right">
+  <label for="menu-right" class="menu-bt right"></label>
+  <div class="nav-menu right">
+   <div class="menu-scroll">
+     <h5>Navegação</h5>
+     <a href="/" class="mdi mdi-home"> Home</a>
+     <a href="https://wiki-kettraword.vercel.app" class="mdi mdi-wikipedia" target="_blank"> Wiki</a>
      <h5>Redes sociais</h5>
      <a href="https://discord.gg/NDzFeDp8YE" class="mdi mdi-discord" target="_blank"> Discord</a>
      <a href="https://www.instagram.com/kettraworld" class="mdi mdi-instagram" target="_blank"> Instagram</a>
      <a href="https://github.com/kettraworld" class="mdi mdi-git"
      target="_blank"> Github</a>
+      <h5>Jogador</h5>
+   {Astro.cookies.get("token") ? <a href="/dashboard" class="mdi mdi-account"> Dashboard</a> : <a href={config.DISCORD.authorization} class="mdi mdi-login"> Entrar</a>}
     </div>
-   </div>
-  </nav>
+  </div>
+ </nav>

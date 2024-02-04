@@ -1,12 +1,14 @@
 import { defineConfig } from 'astro/config';
-import vercel from '@astrojs/vercel/static';;
-import sitemap from '@astrojs/sitemap';
-import mdx from '@astrojs/mdx';
+import svelte from '@astrojs/svelte'
+import map from '@astrojs/sitemap';
+import node from '@astrojs/node';
 
 export default defineConfig({
   site: 'http://0.0.0.0:8080',
-  output: 'static',
-  adapter: vercel(),
+  output: 'server',
+  adapter: node({
+    mode: 'standalone',
+  }),
   server: { host: '0.0.0.0', port: 8080 },
-  integrations: [mdx(), sitemap()],
+  integrations: [svelte(), map()]
 });

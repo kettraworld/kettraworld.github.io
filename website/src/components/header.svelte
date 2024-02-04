@@ -1,4 +1,3 @@
-
 <style>
 
 .header-body {
@@ -78,7 +77,6 @@
   
 }
 </style>
-
 <header class="header-body">
   <h1>Kettra World</h1>
   <span>Lar da grande Deusa Amarantha e seus irmãos, que deram tudo de si para selar o imensurável poder da Deusa primogênita Tainith, que iria destruir o mundo conhecido na era como Koramund</span>
