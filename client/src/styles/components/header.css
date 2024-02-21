@@ -1,17 +1,16 @@
-<style>
 
 .header-body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: url('https://kettraworld.vercel.app/background/header.jpeg');
+  background-image: url('../../img/background/header.jpeg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;  
   text-align: center;
   border-bottom: 1px solid #ccc;
   padding: 10px;
-  color: #fff;
+  color: var(--text-color);
 }
 
 .header-body h1 {
@@ -76,8 +75,3 @@
 @media screen and (min-width: 1024px) {
   
 }
-</style>
-<header class="header-body">
-  <h1>Kettra World</h1>
-  <span>Lar da grande Deusa Amarantha e seus irmãos, que deram tudo de si para selar o imensurável poder da Deusa primogênita Tainith, que iria destruir o mundo conhecido na era como Koramund</span>
-</header>
