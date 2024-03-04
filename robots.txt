@@ -64,6 +64,6 @@ Disallow: /callback
 User-agent: Applebot
 Disallow: /callback
 
-Sitemap: https://www.kettraworld.shop/sitemap.xml
+Sitemap: https://kettraworld.github.io/sitemap.xml
 
 # In case of any problems, please contact us via email: kettraworld@gmail.com
