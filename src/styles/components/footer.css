@@ -1,13 +1,9 @@
 .footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  
   background: linear-gradient(to bottom, var(--layout), var(--layout-dark));
   padding: 1rem;
   color: #fff;
   text-align: center;
-  border-radius: 10px;
 }
 
 .footer a {
