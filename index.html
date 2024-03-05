@@ -11,7 +11,7 @@
   <meta property="og:title" content="Kettra World">
  
   <link rel="shortcut icon" href="src/img/favicon.ico" type="image/x-icon" />
- 
+  
   <link rel="stylesheet" href="src/styles/main.css" type="text/css" media="all" />
   
   <script src="src/js/js.cookie.min.js" type="text/javascript"></script>
@@ -57,10 +57,30 @@
   </div>
   
   <main>
-   <section class="section">
+   <section id="shop" class="section">
     <h2 class="title">
         <span class=""></span> <i class="fas fa-shop"></i> Loja
       </h2>
+     <style>
+       .loading {
+         color: #fff;
+         animation: loading 2s linear infinite;
+       }
+  
+       @keyframes loading {
+         0% {
+           transform: rotate(0deg);
+         }
+
+         100% {
+           transform: rotate(360deg);
+         }
+       }
+     </style>
+     <shop class="card">
+      <i class="fas fa-spinner loading"></i> 
+     </shop>
+     <!---
     <shop class="card">
       <div class="icon">
       <img src="src/img/favicon.ico" />
@@ -101,6 +121,7 @@
          <button class="shop">R$ 19,99</button>
         </a>
         </shop>
+     --->
    </section>
    <section class="section play">
     <div class="content flex">
