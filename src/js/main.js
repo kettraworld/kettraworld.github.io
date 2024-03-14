@@ -1,23 +1,29 @@
+const $query = new URLSearchParams(window.location.search);
+[...document.querySelectorAll('.toast')].map(x => new bootstrap.Toast(x));
 
 if (Cookies.get('access_token_user')) {
-    $("#login").attr("href", "/pages/user/dashboard.html").removeClass("mdi-login").addClass("mdi-account-circle").text("Dashboard");
+  $("#login").attr("href", "/")
+    .removeClass("mdi-login")
+    .addClass("mdi-account-circle")
+    .text("Dashboard");
 };
 
-const copyBtn = document.getElementById("copy-btn");
+if (Cookies.get('user_cookie') != 'authorized' && $query.get('cookie')) {
+   $("#cookie").css('display', 'block');
+};
 
-copyBtn.addEventListener("click", (event) => {
-	event.preventDefault();
-	var ip = "play.kettraworld.com"; 
-	navigator.clipboard.writeText(ip).then(() => {
-		var popup = document.getElementById("play-copy-alert");
-		
-		setTimeout(function() {
-			popup.classList.add("show");
-		
+$("#ip").on('click', () => {
+ 
+	navigator.clipboard.writeText("play.kettraworld.com").then(() => {
+	  
+		setTimeout(() => {
+			$("#play-copy-alert").addClass("show");
 		}, 50);
 
-		setTimeout(function() {
-			popup.classList.remove("show");
+		setTimeout(() => {
+			$("#play-copy-alert").removeClass("show");
 		}, 5000);
+		
 	});
+	
 });
