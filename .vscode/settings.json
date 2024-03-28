@@ -1,6 +1,6 @@
 {
   "editor.tabSize": 2,
-  "editor.fontSize": 14,
+  "editor.fontSize": 16,
   "editor.fontFamily": "Consolas, 'Courier New', monospace",
   "editor.wordWrap": "on",
   "editor.formatOnSave": true,
