@@ -1,12 +1,11 @@
 
-/*
 if (Cookies.get('user_cookie') != 'authorized') {
   window.location = '/?cookie=denied';
 };
 
 if (!$query.get('product')) {
- // window.location = '/?product=invalid';
-};*/
+  window.location = '/?product=invalid';
+};
 
 function $location(latitude, longitude) {
   return new Promise((resolve, reject) => {
@@ -137,5 +136,37 @@ if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test($payment.email.val())) {
   message('Ops! Para garantir um preenchimento correto do formulário é necessário que você forneça um <strong>e-mail</strong> valido!');
   return;
 };
+
+ const paymentData = {
+  product: $query.get('product'),
+  name: $payment.name.val(),
+  surname: $payment.surname.val(),
+  nick: $payment.nick.val(),
+  email: $payment.email.val(),
+  coupon: $payment.coupon.val(),
+  platform: $payment.platform.val(),
+  address: $payment.address.val(),
+  city: $payment.city.val(),
+  cep: $payment.cep.val(),
+  state: $payment.state.val(),
+  country: $payment.country.val(),
+  latitude: $payment.latitude.val(),
+  longitude: $payment.longitude.val(),
+  ip: Cookies.get('user_ip')
+};
+
+$.ajax({
+  url: 'https://84995565-8ea7-47ff-a534-c435d483e8ca-00-23qj3vgf7wrxs.riker.replit.dev/payment/create',
+  type: 'POST',
+  contentType: 'application/json',
+  data: JSON.stringify(paymentData),
+  success: function(response) {
+    console.log('Requisição enviada com sucesso:', response);
+  },
+  error: function(xhr, status, error) {
+    console.error('Erro ao enviar requisição:', error);
+  }
+});
+
 
 });
