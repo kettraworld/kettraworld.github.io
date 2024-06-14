@@ -12,7 +12,6 @@ import morgan from 'morgan';
 import helmet from 'helmet';
 import cors from 'cors';
 import '#db/sequelize';
-import 'dotenv';
 const app = express();
 
 app.set('trust proxy', 1);
@@ -20,13 +19,11 @@ app.use(helmet());
 app.use(body.json());
 app.use(compression());
 app.use(morgan('combined'));
-app.set('view engine', 'handlebars');
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
     origin: '*',
-    methods: ['*'],
-    allowedHeaders: ['*'],
+    methods: ['GET', 'POST'],
   }),
 );
 app.use(

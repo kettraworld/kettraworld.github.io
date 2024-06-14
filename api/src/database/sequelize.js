@@ -1,10 +1,8 @@
 import logger from "#functions/logger";
 import Sequelize from 'sequelize';
 
-const sequelize = new Sequelize('','','', {
+const sequelize = new Sequelize(process.env.URL_MYSQL, {
   dialect: 'mysql',
-  host: '',
-  port: '',
   logging: false,
   define: {
     timestamps: false,
