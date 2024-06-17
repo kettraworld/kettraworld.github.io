@@ -87,7 +87,7 @@ export async function register(username, token) {
   <td align="center" class="content">
     <h1>Bem-vindo a Kettra World</h1>
     <p>Olá, <b>${username}</b>.</p>
-    <p>• Registre o seu nickname do minecraft <a href="https://kettraworld.github.io/player/register?code=${token}" style="color: #8a2be2;">aqui</a>
+    <p>• Registre o seu nickname do minecraft <a href="https://kettraworld.github.io/?register=${token}" style="color: #8a2be2;">aqui</a>
     </p>
   </td>
 </tr>

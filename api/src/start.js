@@ -1,6 +1,5 @@
 import limit from 'express-rate-limit';
 import payment from '#routes/payment';
-import player from '#routes/player';
 import product from '#routes/product';
 import auth2 from '#routes/auth2';
 import compression from 'compression';
@@ -35,7 +34,6 @@ app.use(
 );
 
 app.use('/payment', payment);
-app.use('/player', player);
 app.use('/product', product);
 app.use('/auth2', auth2);
 

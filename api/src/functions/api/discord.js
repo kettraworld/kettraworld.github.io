@@ -4,11 +4,11 @@ export async function $auth2(hash) {
   const response = await fetch('https://discord.com/api/oauth2/token', {
     method: 'POST',
     body: new URLSearchParams({
-      client_id: '993546761991884911',
-      client_secret: 'HEMd4cMnPerZ2mX1PV_UPnplSy7Lm6wo',
+      client_id: process.env.CLIENT_ID,
+      client_secret: process.env.CLIENT_SECRET,
       code: hash,
       grant_type: 'authorization_code',
-      redirect_uri: `http://0.0.0.0:8080/auth2/discord`,
+      redirect_uri: process.env.REDIRECT_URI,
       scope: [],
     }).toString(),
     headers: {

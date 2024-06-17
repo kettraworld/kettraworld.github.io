@@ -1,5 +1,6 @@
 import logger from "#functions/logger";
 import Sequelize from 'sequelize';
+import nlogin from 'nlogin-js';
 
 const sequelize = new Sequelize(process.env.URL_MYSQL, {
   dialect: 'mysql',
@@ -21,4 +22,6 @@ try {
   logger.error('Unable to connect to the database:', err.messaage);
 };
 
-export { sequelize };
+const plugin = new nlogin(sequelize);
+
+export { sequelize, plugin };

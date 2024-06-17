@@ -1,17 +1,22 @@
-import { $jwt_sign } from "#functions/api/jwt";
 import { $auth2, $user, $guilds } from "#functions/api/discord";
-import User from '#model/user';
+import { $jwt_sign } from "#functions/api/jwt";
+import { register } from '#email/register';
+import logger from "#functions/logger";
 import { v4 as uuidv4 } from "uuid";
+import User from '#model/user';
+import email from "#email";
 import Joi from 'joi';
 
 const $discord = async (req, res) => {
+  
+  const uuid = uuidv4();
   
   try {
 
     if (!req.query.code) return res.redirect(process.env.URL_DISCORD);
     
     const discord = await $auth2(req.query.code);
-
+   
     if (!discord.access_token) return res.redirect(process.env.URL_DISCORD);
     
     const _user = await $user(`${discord.token_type} ${discord.access_token}`);
@@ -24,32 +29,49 @@ const $discord = async (req, res) => {
 
     const { permissions } = guild;
 
-    let player = await User.findOne({ where: { id: _user.id }, raw: true });
-    
-    console.log(player);
+    const player = await User.findOne({ where: { id: _user.id }, raw: true });
 
     if (!player) {
       player = await User.create({
         id: _user.id,
         username: _user.username,
         email: _user.email,
-        token: uuidv4()
+        token: uuid
       });
       
+     await email.sendMail({
+       from: 'kettraworld@gmail.com',
+       to: _user.email,
+       subject: 'Bem vindo ao servidor!',
+       html: await register(_user.username, uuid)
+     });
+     
       return res.status(303).redirect(process.env.URL_CALLBACK);
       
+    };
+    
+    if (!player.nick) {
+     await email.sendMail({
+       from: 'kettraworld@gmail.com',
+       to: _user.email,
+       subject: 'Bem vindo ao servidor!',
+       html: await register(_user.username, player.token)
+     });
+     
+      return res.status(303).redirect(process.env.URL_CALLBACK);
     };
 
     const jwt = await $jwt_sign({
       user: _user,
-      nickname: null,
+      nickname: player.nick,
       permissions
     });
 
-    return res.status(200).json({ jwt });
+    return res.status(303).redirect(process.env.URL_LOGIN + jwt);
 
   } catch (err) {
-    console.error('Erro no processo de autenticação do Discord:', err);
+    logger.error(err.message);
+    res.status(505).json({ err: e.message });
   }
 };
 

@@ -12,15 +12,3 @@ const transporter = nodemailer.createTransport({
 });
 
 export default transporter;
-
-import { register } from './template/register.js';
-
-( async () => {
-const info = await transporter.sendMail({
-  from: 'kettraworld@gmail.com',
-  to: 'sebastianjnuwu@gmail.com',
-  subject: 'Bem vindo ao servidor!',
-  html: await register('Chaves', '.git')
-});
-console.log(info)
-})()
