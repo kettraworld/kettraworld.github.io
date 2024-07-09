@@ -5,9 +5,11 @@ import Joi from 'joi';
 const $create = async (req, res) => {
 
   const schema = Joi.object({
-    product: Joi.number().max(1).required(),
-    coupon: Joi.string().allow('').optional(), 
-    platform: Joi.string().valid('pix').required(),
+    product: Joi.number().required(),
+    nick: Joi.string().min(4).max(16).required(),
+    email: Joi.string().min(12).max(80).required(),
+    coupon: Joi.string().max(20).optional(), 
+    platform: Joi.string().required(),
   });
 
   const { error, value } = schema.validate(req.body);
@@ -17,8 +19,6 @@ const $create = async (req, res) => {
   const item = await search(value);
 
   if (!item) return res.status(400).json({ error: 'Product not found' });
-
-  console.log(item);
  
   switch (item.platform) {
     case 'pix':

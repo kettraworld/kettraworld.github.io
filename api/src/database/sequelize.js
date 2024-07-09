@@ -2,7 +2,7 @@ import logger from "#functions/logger";
 import Sequelize from 'sequelize';
 import nlogin from 'nlogin-js';
 
-const sequelize = new Sequelize(process.env.URL_MYSQL, {
+const sequelize = new Sequelize(process.env.MYSQL, {
   dialect: 'mysql',
   logging: false,
   define: {

@@ -14,12 +14,6 @@ const transaction = sequelize.define('TRANSACTION', {
   product: {
     type: Sequelize.BIGINT, 
   },
-  name: {
-    type: Sequelize.STRING,
-  },
-  surname: {
-    type: Sequelize.STRING,
-  },
   nick: {
     type: Sequelize.STRING,
   },
@@ -30,30 +24,6 @@ const transaction = sequelize.define('TRANSACTION', {
     type: Sequelize.BOOLEAN,
   },
   platform: {
-    type: Sequelize.STRING,
-  },
-  address: {
-    type: Sequelize.STRING,
-  },
-  city: {
-    type: Sequelize.STRING,
-  },
-  cep: {
-    type: Sequelize.STRING,
-  },
-  state: {
-    type: Sequelize.STRING,
-  },
-  country: {
-    type: Sequelize.STRING,
-  },
-  latitude: {
-    type:  Sequelize.STRING,
-  },
-  longitude: {
-    type:  Sequelize.STRING,
-  },
-  ip: {
     type: Sequelize.STRING,
   },
   price: {

@@ -39,7 +39,8 @@ export async function search(value) {
     product: value.product,
     nick: value.nick,
     email: value.email,
-    coupon: value.coupon,
+    coupon: value.coupon ? true : false,
+    coupon: value.coupon ? true : false,
     platform: value.platform,
     price: price,
     pay: item.price
@@ -50,7 +51,7 @@ export async function search(value) {
     product: value.product,
     nick: value.nick,
     email: value.email,
-    coupon: value.coupon,
+    coupon: value.coupon ? true : false,
     platform: value.platform,
     price: price,
     pay: item.price

@@ -1,7 +1,6 @@
 import limit from 'express-rate-limit';
 import payment from '#routes/payment';
 import product from '#routes/product';
-import auth2 from '#routes/auth2';
 import compression from 'compression';
 import logger from "#functions/logger";
 import body from 'body-parser';
@@ -35,7 +34,6 @@ app.use(
 
 app.use('/payment', payment);
 app.use('/product', product);
-app.use('/auth2', auth2);
 
 app.get('*', (req, res) => {
   res.json({ message: "Hello World!" });

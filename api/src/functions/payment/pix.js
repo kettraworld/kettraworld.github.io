@@ -5,7 +5,7 @@ function pix(value, res) {
   const body = {
     description: `⛃ Pacote ${value.product_name} - ❖ ${
       value.nick
-    } || Desconto ${value.discount ? "aplicado!" : "não aplicado!"}`,
+    } || Desconto ${value.coupon ? "aplicado!" : "não aplicado!"}`,
     payment_method_id: "pix",
     payer: {
       email: value.email,
