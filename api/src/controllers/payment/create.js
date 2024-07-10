@@ -7,7 +7,7 @@ const $create = async (req, res) => {
   const schema = Joi.object({
     product: Joi.number().required(),
     nick: Joi.string().min(4).max(16).required(),
-    email: Joi.string().min(12).max(80).required(),
+    email: Joi.string().email().min(12).max(80).required(),
     coupon: Joi.string().max(20).optional(), 
     platform: Joi.string().required(),
   });
@@ -27,7 +27,7 @@ const $create = async (req, res) => {
     default:
       res.status(505).json({ error: 'Payment method not found' });;
   }
-  
+
 };
 
 export default $create;

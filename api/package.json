@@ -24,6 +24,7 @@
     "#db/*": "./src/database/*.js"
   },
   "dependencies": {
+    "axios": "^1.7.2",
     "body-parser": "^1.20.2",
     "colors": "^1.4.0",
     "compression": "^1.7.4",

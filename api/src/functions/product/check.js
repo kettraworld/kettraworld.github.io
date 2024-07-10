@@ -5,8 +5,9 @@ import { v4 } from "uuid";
 
 export async function $check(id, key) {
  
-  const data = await coupon.findOne({
-    where: { key }, raw: true });
+  const data = await coupon.findOne({ where: { key }, raw: true }).catch(err => {
+      return false;
+  });
     
   if (!data) return false;
 
@@ -21,10 +22,10 @@ export async function search(value) {
   try {
    
    const item = await product.findByPk(value.product, { raw: true });
-
+   
    if (!item) return false;
 
-   const _coupon = await check(value.coupon);
+   const _coupon = await $check(value.product, value.coupon);
    const price = item.price;
    const uuid = v4();
    item.discount = _coupon ? true : false;
@@ -32,32 +33,30 @@ export async function search(value) {
    if (_coupon) {
     item.price = item.price - (item.price * _coupon) / 100;
     item.price = item.price.toFixed(2);
-   }
+   };
 
    await transaction.create({
     uuid: uuid,
     product: value.product,
     nick: value.nick,
     email: value.email,
-    coupon: value.coupon ? true : false,
-    coupon: value.coupon ? true : false,
+    coupon: item.discount,
     platform: value.platform,
-    price: price,
+    price: item.price,
     pay: item.price
    });
 
    return {
     uuid: uuid,
-    product: value.product,
+    product: item,
     nick: value.nick,
     email: value.email,
-    coupon: value.coupon ? true : false,
     platform: value.platform,
-    price: price,
     pay: item.price
    };
    
-  } catch (e) {
-   return false;
+  } catch (err) {
+    console.log(err.message);
+    return false;
   } 
 };
