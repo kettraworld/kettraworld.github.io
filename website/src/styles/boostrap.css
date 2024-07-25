@@ -1,0 +1,73 @@
+.tooltip {
+  --bs-tooltip-bg: var(--layout) !important;
+  --bs-tooltip-color: #fff;
+}
+.ip-message {
+  margin: 0;
+  padding: 10px;
+  color: var(--text-color);
+  border-radius: 25px;
+  text-align: center;
+  background: linear-gradient(to bottom, var(--layout), var(--layout-dark));
+  border: 0.3px solid #fff;
+  box-shadow: 1.5px 1.5px 5px #555;
+  justify-content: space-between;
+  animation: bubble-animation 2s infinite;
+}
+.ip-message p {
+  margin: 5px !important;
+}
+.ip-message button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #fff;
+  text-transform: uppercase;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 16px;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  background: linear-gradient(to bottom, var(--layout), var(--layout-dark));
+}
+.ip-message button:hover {
+  animation: click-animation 0.2s forwards;
+  transform: scale(1.05);
+  background: linear-gradient(to bottom, var(--layout), var(--layout-dark));
+}
+.ip-message button:disabled {
+  background: linear-gradient(to bottom, var(--layout), var(--layout-dark));
+  cursor: not-allowed;
+  transform: none;
+  opacity: 0.3;
+}
+.modal .modal-dialog .modal-content {
+  color: var(--text-color) !important;
+  background-color: var(--section-color) !important;
+}
+.google {
+  display: flex;
+  gap: 16px;
+}
+.google button {
+  padding: 8px;
+  width: 100%;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--text-color);
+  border: 1px solid var(--layout);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.6s ease;
+}
+.google button i {
+  font-size: 25px;
+}
+.google button:hover {
+  color: var(--layout-dark);
+  border-color: var(--layout-dark);
+}

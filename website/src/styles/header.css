@@ -1,0 +1,127 @@
+.header-news {
+  display: flex;
+  padding: 5px;
+  justify-content: center;
+  background: linear-gradient(to bottom, var(--layout), var(--layout-dark));
+}
+
+.header-news span {
+  text-align: center;
+  color: var(--text-color);
+  font-size: 10px;
+}
+
+.header-head {
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("../images/background/header.gif");
+  background-size: cover;
+  text-align: center;
+  padding: 10px;
+  color: var(--text-color);
+}
+
+.header-head h1 {
+  margin: 5px;
+  font-size: 55px;
+  font-weight: bold;
+  text-shadow: var(--text-shadow);
+}
+
+.header-head span {
+  font-size: 10px;
+  font-weight: 300;
+  text-align: center;
+  text-shadow: var(--text-shadow);
+}
+
+.header-body {
+  padding: 50px 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  background-image: url(../images/background/body.gif);
+}
+
+.header-body-text {
+  align-content: center;
+  align-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+.header-body h1 {
+  margin: 5px;
+  font-weight: bold;
+  font-size: 25px;
+  white-space: nowrap;
+  text-shadow: 0px 4.5px 0px #555;
+}
+
+.header-body span {
+  font-size: 12px;
+  text-transform: initial;
+  text-shadow: 0px 1.5px 0px #555;
+}
+
+.header-body button {
+  margin: 0 !important;
+  text-align: center;
+  color: #fff !important;
+  font-size: 1.8rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.header-body button:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: 320px) {
+
+  .header-head {
+    height: auto;
+    padding: 10px;
+  }
+
+  .header-head h1 {
+    font-size: 50px;
+    margin: 5px;
+  }
+
+  .header-head span {
+    font-weight: 300;
+    text-align: center;
+    font-size: 10px;
+  }
+
+}
+
+@media screen and (min-width: 720px) {
+
+  .header-head {
+    height: auto;
+    padding: 20px;
+  }
+
+  .header-head h1 {
+    font-size: 50px;
+    font-weight: bold;
+  }
+
+  .header-head span {
+    font-weight: 300;
+    text-align: center;
+    font-size: 12px;
+  }
+}
