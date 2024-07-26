@@ -20,7 +20,7 @@ const auth = getAuth(app);
 const analytics = getAnalytics(app);
 
 onAuthStateChanged(auth, (user) => {
-  console.log(user);
+  //console.log(user);
 });
 
 if (Cookies.get('account')) {

@@ -5,8 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=7,8,edge" />
   <title>Kettra World</title>
+  <meta name="theme-color" content="#8a2be2" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#8a2be2" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#8a2be2" />
+  <link rel="manifest" href="manifest.json" />
   <link rel="shortcut icon" href="src/images/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="src/styles/ui.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' type="text/css" media="all" />
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +22,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.5/js.cookie.min.js" integrity="sha512-nlp9/l96/EpjYBx7EP7pGASVXNe80hGhYAUrjeXnu/fyF5Py0/RXav4BBNs7n5Hx1WFhOEOWSAVjGeC3oKxDVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
-<body theme="dark">
+<body class="light">
   <ui id="kettraworld">
    <header class="header-news">
     <span>
@@ -57,12 +62,9 @@
       <h1>IMAGINE UM LUGAR ONDE...</h1>
       <span>"...Onde você pode escrever o seu próprio destino sem medo do final da história por que a sinopse é apenas um detalhe"</span>
      <div class="text-center">
-    <button id="social" class="bx bxl-twitch" value="twitch"></button>
-    <button id="social" class="bx bxl-youtube" value="youtube"></button>
-    <button id="social" class="bx bxl-discord" value="discord"></button>
-    <button id="social" class="bx bxl-reddit" value=""></button>
-    <button id="social" class="bx bxl-instagram" value="instagram"></button>
-    <button id="social" class="bx bxl-github" value="github"></button>
+    <button id="social" class="bx bxl-youtube youtube"></button>
+    <button id="social" class="bx bxl-discord discord"></button>
+    <button id="social" class="bx bxl-instagram instagram"></button>
     </div>
   </div>
 
@@ -74,96 +76,9 @@
     <div id="message"></div>
    </div>
  
-    <div class="modal fade" id="modal-privacy" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="modal-privacyLabel"><span class='bx bx-shield'></span> Política de Privacidade</h1>
-    <button type="button" style="box-shadow: none; outline: none;" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div style="font-family: serif;" class="modal-body policy">
-    <h5>1. Informações Coletadas</h5>
-    <p>Coletamos as seguintes informações dos usuários:</p>
-    <ul>
-      <li>Login e senha do Minecraft</li>
-      <li>Endereço de email</li>
-      <li>Nickname no jogo</li>
-    </ul>
 
-    <h5>1.1. Como coletamos as informações</h5>
-    <p>As informações são coletadas através do formulário de cadastro e durante o uso do servidor.</p>
-
-    <h5>2. Uso das Informações</h5>
-    <p>As informações coletadas são utilizadas para:</p>
-    <ul>
-      <li>Gerenciar o acesso ao servidor</li>
-      <li>Enviar notificações e atualizações</li>
-      <li>Personalizar a experiência do usuário</li>
-    </ul>
-
-    <h5>2.1. Gerenciamento de acesso</h5>
-    <p>Utilizamos suas informações de login para autenticar e permitir o acesso ao servidor.</p>
-
-    <h5>2.2. Envio de notificações</h5>
-    <p>Seu email pode ser usado para enviar notificações importantes sobre o servidor.</p>
-
-    <h5>3. Compartilhamento de Informações</h5>
-    <p>Não compartilhamos suas informações com terceiros, exceto quando necessário para cumprir a lei ou proteger nossos direitos.</p>
-
-    <h5>3.1. Exceções legais</h5>
-    <p>Em caso de cumprimento de obrigações legais, podemos compartilhar suas informações com as autoridades competentes.</p>
-
-    <h5>4. Segurança</h5>
-    <p>Implementamos medidas de segurança para proteger suas informações pessoais contra acesso não autorizado.</p>
-
-    <h5>4.1. Medidas de proteção</h5>
-    <p>Utilizamos criptografia e outras tecnologias para garantir a segurança de suas informações.</p>
-            <small>Última atualização: 02/08/2024 as 15:06:03 por Sebastian</small>
-</div>
-
-  </div>
-    </div>
-  </div>
-  
-    <div class="modal fade" id="modal-terms" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="modal-termsLabel"><i class='bx bxs-book-content icon'></i> Termos de Uso</h1>
-        <button type="button" style="box-shadow: none; outline: none;" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div style="font-family: serif;" class="modal-body policy">
-        <h5>1. Aceitação dos Termos</h5>
-        <p>Ao acessar ou usar nosso servidor de Minecraft, você concorda com estes Termos de Uso e com nossa Política de Privacidade.</p>
-
-        <h5>2. Uso do Servidor</h5>
-        <p>Você concorda em utilizar nosso servidor apenas para fins permitidos e de acordo com todas as leis aplicáveis.</p>
-
-        <h5>3. Contas de Usuário</h5>
-        <p>Você é responsável por manter a confidencialidade de suas credenciais de acesso ao servidor.</p>
-
-        <h5>4. Conduta do Usuário</h5>
-        <p>Você concorda em não realizar atividades que possam comprometer a segurança ou o funcionamento do servidor.</p>
-
-        <h5>5. Modificações</h5>
-        <p>Reservamos o direito de modificar estes Termos de Uso a qualquer momento. Alterações entrarão em vigor imediatamente após serem publicadas.</p>
-
-        <h5>6. Limitação de Responsabilidade</h5>
-        <p>Não nos responsabilizamos por quaisquer danos diretos, indiretos, incidentais, especiais ou consequenciais decorrentes do uso do nosso servidor.</p>
-
-        <h5>7. Encerramento de Conta</h5>
-        <p>Reservamos o direito de encerrar sua conta e negar acesso ao servidor caso haja violação destes Termos de Uso ou de nossa Política de Privacidade.</p>
-
-        <h5>8. Disposições Gerais</h5>
-        <p>Estes Termos de Uso constituem o acordo completo entre você e nós em relação ao uso do servidor de Minecraft.</p>
-
-        <small>Última atualização: 02/08/2024 as 15:06:03 por Sebastian</small>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="modal-shop" tabindex="-1" aria-hidden="true">
+ <div class="modal fade" id="modal-shop"
+ tabindex="-1" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -232,7 +147,7 @@
   </div>
   <div class="form-group">
     <label class="terms">
-      <div class="body">Ao adquirir este item, eu reforço meu compromisso com as <a href="/pages/privacy.html">Políticas de Privacidade</a> e os <a href="/pages/terms.html">Termos de Serviço</a>, aceitando-os com total convicção.</div>
+      <div class="body">Ao adquirir este item, eu reforço meu compromisso com as <a href="pages/privacy.html">Políticas de Privacidade</a> e os <a href="pages/terms.html">Termos de Serviço</a>, aceitando-os com total convicção.</div>
     </label>
   </div>
   <div class="form-group">
@@ -249,14 +164,13 @@
   </div>
 </div>
 
-
-  <section>
+ <section>
     <div class="ip-message">
   <p>Clique no botão para copiar o IP do servidor mais divertido do Brasil. A porta para o <b>java é 103678</b> e para <b>bedrock é 71671</b>. Jogue!</p>
     <button class="play-button level-up-effect" id="ip"><i class="bx bx-copy"></i></button>
    </div>
   </section>
-  <section>
+ <section style="padding: 0;">
    <div class="row">
     <div class="col-md-4 d-flex">
      <section class="main flex-grow-1">
@@ -321,20 +235,22 @@
     </div>
   </div>
  </section>
-  <section class="main">
+ <section class="main">
    <h2 class="title">
-      <i class="bx bx-store"></i> Loja
-    </h2>
-    <div id="shop-itens">
-      <shop class="card">
-        <span style="font-size: 3rem;word-break: break-word;color: #fff; margin: 5px;" class="bx bx-loader-circle loading"></span>
-      </shop>
-    </div>
+      <i id="shop-back" class="bx bx-store"></i> Loja
+   </h2>
+   
+  <div class="row">
+   <div id="shop-categories">
+  </div>
+  </div>
+  <div id="shop-itens"></div>
  </section>
- </main>
+ 
+</main>
    <cookie id='cookie'>
    <div class='content'>
-<p>Em <b>Kettra World</b>, utilizamos <i>cookies</i> para personalizar e aprimorar sua experiência, fornecer recursos de redes sociais e analisar nosso tráfego. Ao continuar navegando em nosso site, você concorda com nossa <a href="modal-privacy" data-bs-target="#modal-privacy" data-bs-toggle="modal">Política de Privacidade</a> e <a href="modal-terms" data-bs-target="#modal-shop" product="01" data-bs-toggle="modal">Termos de Serviço</a>, que detalham como coletamos, usamos e protegemos suas informações pessoais.</p>
+<p>Em <b>Kettra World</b>, utilizamos <i>cookies</i> para personalizar e aprimorar sua experiência, fornecer recursos de redes sociais e analisar nosso tráfego. Ao continuar navegando em nosso site, você concorda com nossa <a href="pages/policy.html?cookie=modal">Política de Privacidade</a> e <a href="pages/terms.html?service=modal">Termos de Serviço</a>, que detalham como coletamos, usamos e protegemos suas informações pessoais.</p>
      <div class="row">
        <div class="col">
          <button class="btn btn-block" onclick="CookieClose()"><i class="bx bx-window-close"></i></button>
@@ -378,6 +294,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/eruda/3.2.1/eruda.min.js" integrity="sha512-fdP2/RCjcf6sDcK/4LNwtUZ7zQA3+ZX3zAxqUS5Xi3qS/UgTGt3Ov3KJGp6SrMi/xjYGA59b/6eGXgq47Kn34g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <script>
-    eruda.init();
+   eruda.init();
   </script>
 </html>

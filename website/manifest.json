@@ -1,0 +1,29 @@
+{
+  "theme_color": "#8a2be2",
+  "background_color": "#483d8b",
+  "icons": [{
+    "purpose": "maskable",
+    "sizes": "512x512",
+    "src": "src/images/icon-512x512.png",
+    "type": "image/png"
+  },
+    {
+      "purpose": "any",
+      "sizes": "192x192",
+      "src": "src/images/icon-192x192.png",
+      "type": "image/png"
+    }],
+  "orientation": "any",
+  "display": "fullscreen",
+  "dir": "auto",
+  "lang": "pt-BR",
+  "name": "Kettra World",
+  "short_name": "Kettra World",
+  "start_url": "index.html",
+  "scope": "index.html",
+  "related_applications": [{
+    "platform": "web"
+  }],
+  "description": "Aplicativo usado pelos jogadores do servidor",
+  "id": "kettraworld.github.io"
+}

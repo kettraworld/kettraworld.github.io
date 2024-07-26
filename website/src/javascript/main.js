@@ -1,3 +1,17 @@
+if ("serviceWorker" in navigator) {
+  
+  navigator.serviceWorker.register('worker.js').then((worker) => {
+    return worker.update();
+  }).catch((err) => {
+     console.log("Service worker: ", err.message);
+  });
+  
+  navigator.serviceWorker.ready
+  .then((worker) => {
+    console.log("Service Worker ready!");
+  });
+  
+};
 
 function message(msg) {
   document.getElementById('message').innerHTML = `
@@ -198,32 +212,6 @@ $(document).ready(() => {
       $('#progress-text').text(`${progress}% completo`);
     };
   }, time);
-  
-  $.getJSON('http://129.148.43.196:8080/product').done((data) => {
-  let cards = '';
-  data.forEach(product => {
-    const card = `
-    <shop class="card">
-      <div class="icon">
-      <img src="${product.image}" />
-      </div>
-      <h3>${product.name}</h3>
-      <span>${product.description}</span>
-      <button class="shop" product="${product.id}" data-bs-target="#modal-shop" data-bs-toggle="modal">R$ ${product.price.replace('.', ',')}</button>
-    </shop>
-    `;
-    cards += card;
-  });
-  $('#shop-itens').html(cards);
-  }).fail((err) => {
-  $('#shop-itens').html(`
-    <shop class="card">
-    <span style="font-size: 0.9rem; word-break: break-word; color: #fff; margin: 5px; width: 100%;">
-      <i class="bx bx-ghost"></i> Nenhum produto encontrado. Por favor tente novamente mais tarde!
-    </span>
-    </shop>
-  `);
-});
 
   $('section').on('pointermove', () => {
    if (Cookies.get('user_cookie') != 'authorized') {
@@ -234,6 +222,20 @@ $(document).ready(() => {
 });
 
 
+$('#social.youtube').on('click', () => {
+  $('#click')[0].play();
+  return window.open('https://youtube.com/@kettraworld', '_blank');
+});
+
+$('#social.discord').on('click', () => {
+  $('#click')[0].play();
+  return window.open('https://discord.com/invite/d3YgZTfZq5', '_blank');
+});
+
+$('#social.instagram').on('click', () => {
+  $('#click')[0].play();
+  return window.open('https://www.instagram.com/kettraworld', '_blank'); 
+});
+
  $('loader').css('display', 'none');
  $('#kettraworld').css('display', 'block');
-
