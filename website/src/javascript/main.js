@@ -270,6 +270,7 @@ $(document).ready(() => {
   });
 
 }).fail((err) => {
+    console.log(err.message);
   $('#shop-itens').html(`
     <shop class="card">
       <span style="font-size: 0.9rem; word-break: break-word; color: #fff; margin: 5px; width: 100%;">
