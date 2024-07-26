@@ -219,6 +219,66 @@ $(document).ready(() => {
     };
   });
   
+  $.getJSON('http://129.148.43.196:8080/product').done((data) => {
+  
+  let categories = {};
+  data.forEach(product => {
+    if (!categories[product.category]) {
+      categories[product.category] = [];
+    }
+    categories[product.category].push(product);
+  });
+  let $card_categories = '';
+  for (const category in categories) {
+    const category_card = `
+  <div class="category " data-category="${category}">
+  <img src="src/images/category/${category}.png" alt="${category}" />
+   <p>${category}</p>
+  </div>`;
+    $card_categories += category_card;
+  };
+
+  $('#shop-categories').html($card_categories);
+
+ $('.category').click(function() {
+    const selectedCategory = $(this).data('category');
+    let $card_product = '';
+
+    categories[selectedCategory].forEach(product => {
+      const productCard = `
+        <shop class="card animate__animated animate__zoomIn ">
+          <div class="icon">
+            <img src="${product.image}" />
+          </div>
+          <h3>${product.name}</h3>
+          <span>${product.description}</span>
+          <button class="shop" product="${product.id}" data-bs-target="#modal-shop" data-bs-toggle="modal">R$ ${product.price.replace('.', ',')}</button>
+        </shop>
+      `;
+      $card_product += productCard;
+    });
+
+    $('#shop-itens').html($card_product);
+    $('#shop-categories').hide();
+    $('#shop-back').removeClass('bx-store').addClass('bx-arrow-back');
+  });
+
+ $('#shop-back').click(function() {
+    $('#shop-itens').html('');
+    $('#shop-categories').show();
+    $('#shop-back').removeClass('bx-arrow-back').addClass('bx-store');
+  });
+
+}).fail((err) => {
+  $('#shop-itens').html(`
+    <shop class="card">
+      <span style="font-size: 0.9rem; word-break: break-word; color: #fff; margin: 5px; width: 100%;">
+        <i class="bx bx-ghost"></i> Nenhum produto encontrado. Por favor tente novamente mais tarde!
+      </span>
+    </shop>
+  `);
+});
+
 });
 
 
