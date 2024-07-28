@@ -1,33 +1,27 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-analytics.js";
-import {
-  getAuth,
-  GoogleAuthProvider,
-  signInWithPopup,
-  onAuthStateChanged
-} from "https://www.gstatic.com/firebasejs/10.12.3/firebase-auth.js";
+import { getAnalytics, logEvent, setAnalyticsCollectionEnabled, setUserId } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-analytics.js";
+import { getMessaging, getToken, onMessage } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-messaging.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-auth.js";
 
 const app = initializeApp({
-  apiKey: "AIzaSyAgiuP024hyHaFVkzJ6ciYq4LoaClz6X6I",
-  authDomain: "kettraworld-service.firebaseapp.com",
-  projectId: "kettraworld-service",
-  storageBucket: "kettraworld-service.appspot.com",
-  messagingSenderId: "623673666339",
-  appId: "1:623673666339:web:ae1a9ccfad3af252fbfa96",
-  measurementId: "G-3M1TQQQ9L9"
+  apiKey: "AIzaSyCpx2zcsD186xZWYKOgFWAebW5qGonDe1E",
+  authDomain: "kettraworldapp.firebaseapp.com",
+  projectId: "kettraworldapp",
+  storageBucket: "kettraworldapp.appspot.com",
+  messagingSenderId: "569440499533",
+  appId: "1:569440499533:web:580fd43f923d1524332904",
+  measurementId: "G-6DMN95TVML"
 });
 const auth = getAuth(app);
+const messaging = getMessaging(app);
 const analytics = getAnalytics(app);
 
-onAuthStateChanged(auth, (user) => {
-  //console.log(user);
-});
+setUserId(analytics, Cookies.get('GOOGLE_DISPLAYNAME') || 'N/A');
 
-if (Cookies.get('account')) {
+if (Cookies.get('GOOGLE_UID')) {
   $('#login').css('display', 'none');
   $('#account').css('display', 'flex');
 };
-
 
 $('#login').on('click', () => {
   
@@ -36,11 +30,27 @@ $('#login').on('click', () => {
   $('#login').css('display', 'none');
   $('#account').css('display', 'flex');
   
-    Cookies.set('account', google.user, { 
-      secure: true, sameSite: 'strict', 
-      httpOnly: false, expires: 7
-    });
+  Cookies.set('GOOGLE_UID', google.user.uid, { secure: true, sameSite: 'strict', httpOnly: false, expires: 3 });
+  
+  Cookies.set('GOOGLE_DISPLAYNAME', google.user.displayName, { secure: true, sameSite: 'strict', httpOnly: false, expires: 3 });
+  
+  Cookies.set('GOOGLE_EMAIL', google.user.email, { secure: true, sameSite: 'strict', httpOnly: true, expires: 3 });
+  
+  Cookies.set('GOOGLE_PHOTOURL', google.user.photoURL, { secure: true, sameSite: 'strict', httpOnly: false, expires: 3 });
  
   }).catch((error) => console.log(error));
   
+});
+
+logEvent(analytics, 'page_view', {
+  page_path: window.location.pathname,
+  page_title: document.title,
+  page_location: window.location.href,
+  page_referrer: document.referrer,
+  user_ip: Cookies.get('user_ip') || 'N/A', 
+  user_id: Cookies.get('GOOGLE_DISPLAYNAME') || 'N/A', 
+  user_language: navigator.language,
+  user_agent: navigator.userAgent,
+  user_platform: navigator.platform,
+  site_version: 'v01.08.2024' 
 });
